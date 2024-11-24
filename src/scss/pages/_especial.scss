@@ -1,6 +1,10 @@
 .iconoPrincipal {
  width: min(120px, 90%);
  @extend .marginAuto;
+
+ @include mq(pc) {
+  margin-left: 0;
+ }
 }
 
 .max469 {
@@ -10,6 +14,10 @@
 .imgCohete {
  margin-top: 3rem;
  margin-bottom: 4rem;
+
+ @include mq(pc) {
+  margin-left: -7rem;
+ }
 }
 
 .articles {
