@@ -1,0 +1,136 @@
+.container-sliderAutomatico {
+  // width: 90%;
+  // min-width: 900px;
+  // overflow-y: hidden;
+  margin: auto;
+  position: relative;
+  // overflow-x: hidden;
+  overflow: hidden;
+
+}
+
+.sliderAutomatico {
+  display: flex;
+  // height: 400px;
+  /* Esto depende de la cantidad de imagenes */
+  // width: 400%;
+  margin-left: -100%;
+
+  // max-height: 300px;
+
+  @include mq(tablet) {
+    // max-height: 500px;
+
+  }
+
+}
+
+
+
+.sliderAutomatico__section {
+  width: 100%;
+  // flex-shrink: 0;
+
+}
+
+.sliderAutomatico__img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: 10%;
+  aspect-ratio: 16 / 9;
+}
+
+.sliderAutomatico__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  // background: rgba(0, 0, 0, 0.445);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer !important;
+  font-family: monospace;
+  z-index: $z-index-absoluta;
+
+}
+
+// .sliderAutomatico__btn:hover {
+//   // background: #fff;
+//   // color: $color-primary;
+// }
+
+.sliderAutomatico__btn--left {
+  // left: -20px;
+  left: 0;
+
+  &::after {
+    content: url('/src/assets/NNJ/Flecha-Izq.svg');
+    // content: '<';
+    position: absolute;
+    // width: 40px;// height: 40px;
+
+  }
+}
+
+.sliderAutomatico__btn--right {
+  right: 90px;
+
+  &::after {
+    content: url('/src/assets/NNJ/Flecha-Der.svg');
+    // content: '>';
+    position: absolute;
+    // width: 40px;// height: 40px;
+  }
+}
+
+.sliderAutomatico__btn--right:hover::after,
+.sliderAutomatico__btn--left:hover::after {
+  transform: scale(1.1);
+}
+
+
+.no-btn .sliderAutomatico__btn {
+  display: none;
+}
+
+.sliderAutomatico__btn {
+  @include mqmax(tablet) {
+    display: none;
+  }
+}
+
+
+/*===============================================
+=============        Sliders Navegadores         ===========
+================================================*/
+
+.sliders_navegadores {
+  // background: #000;
+  height: 50px;
+  // width: 100px;
+  margin-left: auto;
+  position: absolute;
+  right: 0rem;
+  bottom: $gutter2 * 1.3;
+  // bottom: 0;
+  // top: -6rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.sliders_navegador {
+  height: 5px;
+  width: 20px;
+  background: #AFB1BF;
+}
+
+
+.sliders_navegadores-container {
+  display: none;
+}

@@ -1,0 +1,156 @@
+/*  */
+.mySwiper {
+ /* height: 350px; */
+ width: 100%;
+ // position: relative;
+ z-index: -1;
+}
+
+.swiper {
+
+ &-wrapper {
+  align-items: center;
+  // justify-content: center;
+  // position: relative;
+
+ }
+
+ &-slide {
+  /* width: 200px; */
+  /* height: 250px; */
+  border-radius: 7px;
+
+ }
+
+ &-pagination {
+  bottom: 0 !important;
+ }
+
+
+ &-content {
+
+  transform: scale(1);
+  transition: transform .3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  gap: $gutter * .5;
+
+  @include mq(tablet) {
+   // width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+
+  }
+
+  &:active {
+   @include mqmax(tablet) {
+
+    transform: scale(0.9);
+   }
+  }
+ }
+}
+
+
+/*===============================================
+=============        Botones         ===========
+================================================*/
+
+.swiper-button-next:after {
+ // content: url('/src/assets/NNJ/Flecha-Der.svg');
+ content: '>';
+ // margin-right: -2rem;
+}
+
+.swiper-button-prev:after {
+ // content: url('/src/assets/NNJ/Flecha-Izq.svg');
+ content: '<';
+}
+
+
+.no-btn [class*=swiper-button] {
+ // background: #000;
+ display: none;
+
+
+}
+
+.no-pag [class*=swiper-pagination] {
+ // background: #000;
+ display: none;
+
+}
+
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+ display: none;
+
+
+ @include mq(pc) {
+  display: initial;
+
+ }
+}
+
+/*===============================================
+=============        Layout         ===========
+================================================*/
+.swiper {
+ // margin-top: $gutter3;// margin-bottom: $gutter3;
+ // position: relative;
+
+ @include mqmax(tablet) {
+
+  &::after {
+   // content: url('/src/assets/NNJ/golpe-fuerte.svg');
+   width: 50px;
+   height: 50px;
+   position: absolute;
+   display: block;
+   bottom: 0;
+   // right: 0;
+   right: 0;
+   // background: #000;
+  }
+ }
+
+
+ &-content_titulo {
+
+  // background: #000;
+  @include mqmax(tablet) {
+   order: 2;
+  }
+ }
+}
+
+.container-sliderAutomatico,
+.sliderTouch_area {
+ margin-top: $gutter2 * 2;
+ padding-bottom: $gutter2;
+}
+
+
+
+/* Especial */
+.swiper-content_parrafo {
+
+ width: 30%;
+
+ @include mqmax(tablet) {
+  width: 70%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+ }
+}
+
+.swiper-content_text {
+ max-width: $width-pc;
+ margin-left: auto;
+ margin-right: auto;
+
+}

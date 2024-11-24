@@ -1,0 +1,5 @@
+/* Make selected text gold on a red background */
+::selection {
+  background-color: $color-primary;
+  color:$color-White;
+}

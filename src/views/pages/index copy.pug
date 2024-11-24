@@ -1,0 +1,248 @@
+//- Ey bro. I need to use something like this. But in a container...
+
+//- When the "text" is crossing into a "specific container", the text color change...
+//- I used `backdrop-filter` but it doesn't works... Do you know how I could do it?? Thanks
+
+-let prefijo = "NNJ";
+-let especialTitulo = "Somos Música";
+
+
+
+//- https://www.eltiempo.com/infografias/2021/12/SomosMusica/
+-let imgURL = "https://www.eltiempo.com/infografias/2021/12/SomosMusica/assets/";
+//- -let imgURL = "./assets/";
+
+//- src=`${imgURL}ventana-abierta-m.png`
+
+
+//- extends ../config/variables.pug
+//- include ../includes/testimonio.pug
+//- include ../includes/testimonioModal.pug
+//- include ../includes/preguntas.pug
+include ../includes/redesSociales.pug
+include ../includes/touchSlider.pug
+include ../includes/sliderCss.pug
+include ../includes/sectionLaVerdad.pug
+//- include ../includes/swiper-slider.pug
+include ../includes/superSliders.pug
+include ../includes/section_nuevaSection.pug
+include ../includes/seccion.pug
+
+doctype html
+html(lang="es")
+ head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+  //- Control de Caché
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+
+  //- link(rel="stylesheet" href="flaticon.css")
+  //- link(rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css')
+  //- script(src='https://unpkg.com/swiper@7/swiper-bundle.min.js' defer='')
+
+  title= `${especialTitulo}`
+ body
+  div(class=`${prefijo}`)
+   #loader
+    span.loaderBar
+    span.loaderBar
+    span.loaderBar
+    span.loaderBar
+    span.loaderBar
+    span.loaderBar
+    span.loaderBar
+    //- p.loaderText Cargando
+
+   .header_hero
+    video(autoplay='' muted='' loop='' poster='' playsinline='').header_video
+     source(src=`${imgURL}introSomosMusica.mp4` type='video/mp4')
+    picture
+     //- El navegador coge el primero que cumpla con los requisitos
+     source(media=`(min-width: 768px)` srcset=`${imgURL}Logo_SomosMusica.png`)
+     //- source(media=`(min-width: 440px)` srcset=`${imgURL}LogoAper-Mobile.svg`)
+     //- source(media=`(max-width: 399px)` srcset=`${imgURL}LogoAper-Mobile.svg`)
+     //- Por si hay un error o las imágenes de arriba no cumple con ninguna mediaQuery carga éste
+     img(src=`${imgURL}Logo_SomosMusica.png` class=`header_logo` alt=`Logo de "La Verdad - Para reparar, sanar y no repetir"` loading="lazy")
+    //- .header_content
+    //-   .header_socialMedia
+    //-     a(href="https://www.facebook.com/sharer/sharer.php?u=https://www.eltiempo.com/infografias/2021/12/SomosMusica/index.html" title="Facebook").social-media__icons
+    //-       <i class="flaticon-facebook"></i>
+    //-     a(href="https://twitter.com/intent/tweet?text= https://www.eltiempo.com/infografias/2021/12/SomosMusica/index.html" title="Twitter").social-media__icons
+    //-       <i class="flaticon-twitter"></i>
+    //-     a(href="https://twitter.com/intent/tweet?text= https://www.eltiempo.com/infografias/2021/12/SomosMusica/index.html" title="E-mail").social-media__icons
+    //-       <i class="flaticon-email"></i>
+   main.main
+
+    section.section
+     .main-socialMedia.container-tablet
+      a(href=`https://www.facebook.com/sharer/sharer.php?u=${redesEnlace}` target="_blank" title="Facebook").social-media__icons
+       <i class="flaticon-facebook"></i>
+      a(href=`https://twitter.com/intent/tweet?text=${especialTitulo}. Conoce más acerca de éste Especial en: ${redesEnlace}` target="_blank" title="Twitter").social-media__icons
+       <i class="flaticon-twitter"></i>
+      a(href=`mailto:?subject=Especial Del Tiempo: ${especialTitulo}&body=${redesEnlace}` target="_blank" title="E-mail").social-media__icons
+       <i class="flaticon-email"></i>
+     -
+      var section_info = {
+       'titulo' : 'Somos Música, un viaje de seis escalas en tono filarmónico',
+       'subTitulo': "El primero de 6 'desconectados' de la Filarmónica de Bogotá y EL TIEMPO tuvo a los Rolling Ruanas y fue dedicado a Boyacá.",
+       'color': '1',
+       'verMas': 'https://www.eltiempo.com/cultura/concierto-virtual-de-la-filarmonica-de-bogota-y-rolling-ruanas-631991',
+       'youtube': '-gR9-XVAMzo',
+       'parrafo': [
+        'Milton Norato lleva 45 años fabricando instrumentos de cuerda: guitarras, tiples, requintos, bandolas. Encerrado en su taller de Chiquinquirá, honra la herencia que resuena en su familia desde el siglo pasado, pues su abuelo, Tomás Norato, fue uno de los primeros lutieres del país.',
+        'Milton y su familia hacen eco de la frase que identifica el nuevo proyecto de la Orquesta Filarmónica de Bogotá (OFB) y EL TIEMPO: Somos Música.',
+        'Los sonidos que engendran las manos de Milton son tan autóctonos, dicen tanto de nosotros, como los de las arpas llaneras o las marimbas de chonta del Pacífico. Y esas ondas musicales protagonizan desde hoy, y hasta el 18 de diciembre, una serie de seis ‘desconectados’: presentaciones musicales de diversas regiones de Colombia, con los arreglos de esa orquesta y las imágenes recogidas por la Unidad de Video de EL TIEMPO.',
+        '“Este proyecto surgió a raíz de la bellísima experiencia que tuvimos con el concierto ‘Volverte a ver’ con Juanes –revela David García, director general de la OFB–. En el momento más duro de la cuarentena, cuando había una enorme incertidumbre y estábamos todos encerrados, nos dimos cuenta de que habíamos dejado de vernos nosotros y de ver el país, dejamos de viajar. Quizás la mayor inspiración para este proyecto fue recordar cómo es Colombia, cómo son las regiones (…). Fue una necesidad emocional la de traer ese país musical”.',
+        //- 'parrafo',
+       ],
+      }
+     +sectionPug(section_info)
+    section.section
+     -
+      var section_info = {
+       'titulo' : 'Somos Música en las sabanas del Meta, al compás de la música llanera',
+       'subTitulo': "El segundo 'desconectado’ de la Filarmónica de Bogotá y EL TIEMPO incluye al músico Raúl Numerao.",
+       'color': '2',
+       'verMas': 'https://www.eltiempo.com/cultura/somos-musica-en-los-llanos-orientales-633685',
+       'youtube': 'KJCkqEouC9s',
+       'parrafo': [
+        '“El llano me da una tranquilidad y una paz que en ningún otro lado he sentido”. Esta frase del músico Raúl Numerao, exponente de la música llanera, ilustra las emociones que despiertan las imágenes del nuevo episodio de Somos Música.',
+        'Esta vez, la Orquesta Filarmónica de Bogotá se unió al ensamble de este cantante, junto con su Grupo Numerao y así hacer siete piezas que engalanaron el proyecto. Al son de arpas, cuatro y capachos, las voces potentes que arrían ganado sirvieron de telón de fondo a las historias que recuerdan los Llanos Orientales del país.',
+        //- 'parrafo',
+       ],
+      }
+     +sectionPug(section_info)
+    //- 3
+    section.section
+     -
+      var section_info = {
+       'titulo' : 'Somos Música, con la gente y las tradiciones del Mar Caribe',
+       'subTitulo': "El tercer 'desconectado' de esta serie tiene como invitado al cantante y actor Alejandro Palacio.",
+       'color': '3',
+       'verMas': ' https://www.eltiempo.com/cultura/somos-musica-en-santa-marta-635397',
+       'youtube': '03z3D29e7rQ',
+       'parrafo': [
+        'Chaquira no es solo el sonido de un orgullo para la costa Caribe colombiana. Las chaquiras también son una costumbre para quienes visitan sus playas y deciden adoptar la moda local, con trenzas en el pelo, coronadas por pequeñas hileras de artesanías, las chaquiras.',
+        'Shirlay Cantillo aprendió a poner chaquiras y a hacer trenzas desde muy pequeña observando a su mamá. Desde las 8 de la mañana recorre las playas de Santa Marta ofreciendo sus peinados y sus masajes para ganar el sustento de su hijo. Sus manos vuelan con habilidad misteriosa en la nueva historia de Somos Música, el regalo que la Orquesta Filarmónica de Bogotá y EL TIEMPO llevan también hasta las aguas tibias del océano.',
+        'De la mano del cantante y actor Alejandro Palacio, como anfitrión, Somos Música presenta cuatro canciones y cuatro historias del Caribe: las chaquiras, las mochilas arhuacas, los pescadores de Taganga y la arepa de huevo.',
+        //- 'parrafo',
+       ],
+      }
+     +sectionPug(section_info)
+    //- 4
+    section.section
+     -
+      var section_info = {
+       'titulo' : 'Somos Música, desde las playas de La Guajira',
+       'subTitulo': "El cuarto 'desconectado' de nuestro viaje tiene como invitado al músico Joaquín Prince.",
+       'color': '4',
+       'verMas': 'https://www.eltiempo.com/cultura/musica-y-libros/somos-musica-desde-las-playas-de-la-guajira-637085',
+       'youtube': '9Ek406jeDdk',
+       'parrafo': [
+        'Usted sabe que ha llegado a La Guajira cuando los 30 grados de temperatura y la brisa refrescante del océano se mezclan con las mujeres vestidas con mantas de colores mientras a lo lejos se advierten los relatos del desierto, de la Sierra Nevada de Santa Marta y del río Ranchería.',
+        'Con el marco de estos paisajes, la Orquesta Filarmónica de Bogotá, el músico Joaquín Prince y EL TIEMPO les regalan a sus usuarios una nueva entrega de Somos Música: La Guajira; un recorrido flanqueado por los flamingos, la escritora de los wayú y la cocinera de los guajiros.',
+        'Ellos representan a los diferentes habitantes de esta península: wayús, kinquis, koguis, wiwas, mestizos y hasta árabes. Los realizadores audiovisuales de EL TIEMPO Sebastián Mendoza, Édgar Sebastián López y Mauricio Moreno registraron con sus lentes las historias de algunas de las personas que a través de su trabajo le han dado significado a lo que es ser guajiro.',
+        //- 'parrafo',
+       ],
+      }
+     +sectionPug(section_info)
+    //- 5
+    section.section
+     -
+      var section_info = {
+       'titulo' : 'Somos Música, desde Cali y el Pacífico, para el mundo',
+       'subTitulo': "Las historias, la comida y las tradiciones de esta región, con la Pacífican Power como invitada.",
+       'color': '5',
+       'verMas':'https://www.eltiempo.com/cultura/musica-y-libros/somos-musica-en-cali-y-el-pacifico-638523',
+       'youtube': 'm5Xj50AjgK8',
+       'parrafo': [
+        'Las manos curtidas de Héctor Arroyo no solo sirven para cortar cañas, sino que tienen la sensibilidad requerida para afinar los mejores acordes de las marimbas de chonta, a medida que las construye.',
+        'Arroyo vive en la vereda El Dagua, a una media hora de Buenaventura, y lleva 15 años fabricando este instrumento, conocido como ‘el piano de la selva’. Su sonido de madera es la base de muchas canciones del Pacífico, y en este caso, del desconectado que la Pacifican Power da este domingo 12 de diciembre, a las 9 p.m.',
+        'El grupo es el invitado de la nueva emisión de Somos Música, el quinto regalo que la Orquesta Filarmónica de Bogotá y EL TIEMPO ofrecen a sus seguidores. Se trata de una serie de seis presentaciones musicales de diversas regiones de Colombia, con los arreglos de esa orquesta y las imágenes recogidas por la Unidad de Video de EL TIEMPO.',
+        //- 'parrafo',
+       ],
+      }
+     +sectionPug(section_info)
+    //- 6
+    section.section
+     -
+      var section_info = {
+       'titulo' : 'Somos Música, con los colores de San Andrés',
+       'subTitulo': "La belleza de esta perla caribeña engalana la música del grupo Creole, invitado en esta entrega.",
+       'color': '6',
+       'verMas':'https://www.eltiempo.com/cultura/musica-y-libros/somos-musica-en-san-andres-640073',
+       'youtube': '-AU7F6EX05c',
+       'parrafo': [
+        'Con un homenaje a Providencia, comienza el sexto y último desconectado de la serie Somos Música, que la Orquesta Filarmónica de Bogotá y EL TIEMPO regalan a sus seguidores. El tributo a la isla que sigue sufriendo tras los destrozos que causó el huracán Iota corre a cargo del grupo Creole, que con sus instrumentos y letras tradicionales del archipiélago pone fin a esta serie.',
+        'Esta vez las historias que se muestran tienen que ver con el atractivo turístico de las islas: algo que conoce de memoria Maritza García, quien vive hace 40 años en San Andrés. Desde que era pequeña, su madre la trajo desde el Chocó y ahora se dedica a actividades turísticas junto a su esposo bogotano.',
+        'Como no nacieron en San Andrés, pero son residentes, son conocidos como pañas. De hecho, aunque sus hijos nacieron en la isla, también son pañas. ',
+        'Su labor fue registrada por las cámaras de Sebastián Mendoza y Joaquín Delgadillo, junto a las tomas aéreas de César Melgarejo, todo ellos realizadores visuales de EL TIEMPO.',
+        //- 'parrafo',
+       ],
+      }
+     +sectionPug(section_info)
+    //- -----------------
+    //- Slider Dignidad
+    //- -----------------
+    -
+     var SuperSlidersInfo = {
+      'numero': '1',
+      'img': [
+       '1',
+       '2',
+       '3',
+       '4',
+       '5',
+       '6',
+       '7',
+       '8',
+       '9',
+       ],
+      'extension': 'jpg',
+      'titulo': [
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       '',
+       ],
+      'parrafo': [
+       ' Las aguas azul turquesa del mar Caribe fueron el telón de fondo de la última emisión de Somos Música en San Andrés.',
+       'En Taganga, Pedro León sale cada día a las 4 de la mañana para desplegar sus redes y preparar su ritual de pesca.',
+       ' Rosa María Jerez vive orgullosa de las vírgenes Otilias, engendradas por sus manos de alfarera en Ráquira',
+       'Artesanías que dan color a los pueblos boyacenses, engalanados con la música de los Rolling Ruanas en Somos Música.',
+       'Milton Norato lleva 45 años fabricando instrumentos de cuerda en su taller de Chiquinquirá: guitarras, tiples, requintos, bandolas.',
+       ' Cuidar la fauna víctima del contrabando de especies es el propósito de vida de Diana Varón, en el Bioparque Los Ocarros.',
+       'El ordeño y el cuidado del ganado son la maestría de vida que Luis Eduardo Barreto ha forjado en el Meta y el Guaviare.',
+       ' Varias horas de vuelo con drones requirieron las tomas aéreas del especial Somos Música: el resultado valió la pena.',
+       'Jessica López y Daniel Torres llevan varios años perfeccionando sus coreografías de joropo en los tablados de Cumaral, Meta.',
+       //- 'Texto',
+      ]}
+    +SuperSlidersPug(SuperSlidersInfo)
+   footer.footer
+    .footer-content.container-tablet
+     h4.footer_titulo Créditos
+     .footer-creditos
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold REALIZADORES DE VIDEO:] Angélica Castellanos, Édgar Sebastián López, César Melgarejo, Juan Manuel Vargas, Joaquín Delgadillo, Sebastián Mendoza, Juan Pablo Rueda.
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold DRON:] César Melgarejo, Mauricio Moreno y Juan Manuel Vargas.
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold DISEÑO DE IDENTIDAD Y ANIMACIÓN:] Iván Darío Camero
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold PRODUCCIÓN:] Juan Carlos Gómez
+      p.footer-creditos_nombre.marginBottom #[strong.footer-creditos_nombreBold DIRECCIÓN:] Julio César Guzmán
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold ORQUESTA FILARMÓNICA DE BOGOTÁ:]
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold Director General:] David García.
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold Director Sinfónico:] Antonio Suárez
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold Director titular:] Joachim Gustaffson.
+      p.footer-creditos_nombre.marginBottom #[strong.footer-creditos_nombreBold Directores invitados:] Ricardo Jaramillo y Orquesta Filarmónica Juvenil.
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold DISEÑO DIGITAL:] Sandra Rojas y Katherine Orjuela
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold MAQUETACIÓN:] The Norman James
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold PERIODISTA DE REPORTAJES MULTIMEDIA:] David Alejandro López Bermúdez
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold EDITOR DE REPORTAJES MULTIMEDIA:] José Alberto Mojica Patiño
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold EDITOR DE MESA CENTRAL:] Jhon Torres
+      p.footer-creditos_nombre #[strong.footer-creditos_nombreBold EDITOR GRÁFICO:] Beiman Pinilla

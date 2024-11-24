@@ -1,0 +1,23 @@
+mixin preguntas(preguntas)
+ article.container-l.article-container
+  figure.article-blockquote
+  blockquote.toUpperCase
+   each texto in preguntas
+    p.article-blockquote-paragraph.line-height--16.margin-bottom--18
+     b= texto.bold
+     =texto.parrafo
+
+
+//- Formato para usar
+//- -
+//-   var preguntasInfo = [
+//-     {
+//-     'bold': '¿Cuántas ',
+//-     'parrafo': 'Mucho Texto',
+//-     },
+//-     {
+//-     'bold': '¿Cuántas ',
+//-     'parrafo': 'Mucho Texto',
+//-     }
+//-   ]
+//- +preguntas(preguntasInfo)

@@ -1,0 +1,78 @@
+
+//- slider-container
+//- slide
+//- img
+
+//- -----------------
+//- Modal TouchSlider
+//- -----------------
+mixin modalTouchSlider(slider, btnClose )
+  div(class="slider-area")
+    a(href=`${btnClose}`).slider-closeBtn &#x000D7;
+    //- Por Proyecto Maradona (IMG)
+    div(class="slider-container")
+      img(src=`${imgURL}swipe-left.svg`, alt="Ilustración informatica que expone el movimiento y función del mouse").modal_3--swipeLeft
+      each slide, index in slider
+        div(class="slide")
+          span.slide-number= `${index + 1} / ${slider.length}`
+          if (`${slide.fontSize}`)
+            p.slider-text(class=`fontSize-${slide.fontSize}`)= slide.text
+          else
+            p.slider-text= slide.text
+
+
+//- -----------------
+//- Archivo
+//- -----------------
+//- -
+//-   var modalTouchSlider = [
+//-     {
+//-       'text': 'https://facebook.com',
+//-     },
+//-     {
+//-       'text': 'https://twitter.com',
+//-     },
+//-     {
+//-       'text': 'https://outlook.com',
+//-     },
+//-   ]
+//- +touchSlider(touchSlider,"#ventanaAbierta")
+
+
+
+
+//- -----------------
+//- Modal TouchSlider
+//- -----------------
+mixin touchSlider(slider, btnClose )
+  div(class="slider-area")
+    a(href=`${btnClose}`).slider-closeBtn &#x000D7;
+    //- Por Proyecto Maradona (IMG)
+    div(class="slider-container")
+      img(src=`${imgURL}swipe-left.svg`, alt="Ilustración informatica que expone el movimiento y función del mouse").modal_3--swipeLeft
+      each slide, index in slider
+        div(class="slide")
+          span.slide-number= `${index + 1} / ${slider.length}`
+          if (`${slide.fontSize}`)
+            p.slider-text(class=`fontSize-${slide.fontSize}`)= slide.text
+          else
+            p.slider-text= slide.text
+
+
+
+//- -----------------
+//- Estructura Original
+//- -----------------
+//-  div(class="slider-area")
+//-   //- Por Proyecto Maradona (IMG)
+//-   div(class="slider-container")
+//-     div(class="slide")
+//-       img(src=`${imgURL}Frase1.svg`, alt="").slider-content
+//-     div(class="slide")
+//-       img(src=`${imgURL}Frase2.svg`, alt="").slider-content
+//- -----------------
+//- JS: Cambiar si es un 'p' o 'img' en las funciones de Javascript
+//- CSS: Cambiar tamano en 'area' y 'content' (revisar media queryies) [Hay que adivinar el tamano]
+//- -----------------
+
+

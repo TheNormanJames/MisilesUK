@@ -1,0 +1,13 @@
+body::after{
+  --scroll: red;
+  --width: 0;
+  content: '';
+  height: 5px;
+  display: block;
+  position: fixed;
+  background: var(--scroll);
+  top: 0;
+  left: 0;
+
+  width: calc(var(--width) * 1vw);
+}

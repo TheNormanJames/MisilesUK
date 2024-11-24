@@ -1,0 +1,40 @@
+mixin modalPug(modalInfo)
+  div(id=`modal_${modalInfo.numero}` class=`modal`)
+    div(class=`modal-conteiner container-l ${modalInfo.color}`)
+      .fixed
+        a(href=`#Testimonio-${modalInfo.numero}` class="modalClose") ⨯
+        .modal-contenido(class=modalInfo.color)
+          picture
+            source(media=`(max-width: 250px)` srcset=`${imgURL}${modalInfo.url}-movil.png`)
+            source(media=`(max-width: 440px)` srcset=`${imgURL}${modalInfo.url}-movil.png 1x, ${imgURL}${modalInfo.url}-movil.png 2x`)
+            source(media=`(max-width: 920px)` srcset=`${imgURL}${modalInfo.url}.png`)
+            source(media=`(min-width: 921px)` srcset=`${imgURL}${modalInfo.url}.png 1x, ${imgURL}${modalInfo.url}.png 2x`)
+            img(src=`${imgURL}${modalInfo.url}.png` class=`modal-imagen` alt=`${modalInfo.alt}` loading="lazy")
+      if modalInfo.tituloModal
+        h3.modal-titulo= `${modalInfo.tituloModal}`
+      if modalInfo.subTituloModal
+        p.modal-subTitulo= `${modalInfo.subTituloModal}`
+          span.modal-subTitulo_border= `${modalInfo.subTituloModal_border}`
+      else
+        p.modal-subTitulo
+          span.modal-subTitulo_border= `${modalInfo.subTituloModal_border}`
+      .modal-parrafos
+        block
+
+//-
+//- Código para ejecutar el mix cuando se necesite.
+//-
+//- -
+//-   var modalPug = {
+//-     numero: "2",
+  titulo: "‘Tuve que disfrazarme de indigente",
+  tituloBreak: "para buscar a mi hija de 15 años’",
+  cita: "Nathalie Amaya, ",
+  citaBreak:"madre de Lynda MichElle, desaparecida y asesinada.",
+  link: "#",
+  color: "purple",
+//-   }
+//- +modalPug(modalPug)
+
+
+//- mixin testimonioModal(testimonioModalInfo)

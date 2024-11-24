@@ -1,0 +1,114 @@
+.card {
+ // width: 380px;
+
+ perspective: 1000px;
+ cursor: pointer;
+
+ min-width: 100%;
+
+
+ @include mq(pc) {
+  min-width: auto;
+  width: 369px;
+  height: 512px;
+ }
+
+ @include mqmax(pc) {
+  padding-block: 20px;
+  overflow: hidden;
+ }
+}
+
+.card:first-of-type {
+ @include mqmax(pc) {
+  // margin-top: 1rem;
+
+ }
+}
+
+.card-inner {
+ position: relative;
+ width: 100%;
+ text-align: center;
+ transform-style: preserve-3d;
+ transition: 1s;
+}
+
+.front-face {
+ backface-visibility: hidden;
+}
+
+//  .front-face img{
+//   width: 100%;
+//   border-radius: 10px;
+//  }
+
+.back-face {
+ backface-visibility: hidden;
+ background-color: #c62600;
+ color: #fff;
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ top: 0;
+ left: 0;
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ transform: rotateY(180deg);
+}
+
+// .card:hover .card-inner,
+// .cardTarget .card-inner {
+//  transform: rotateY(-180deg);
+
+//  @include mq(pc) {
+//   transform: rotateY(-180deg) translate(25%, -25%);
+//   width: 140%;
+
+//  }
+
+// }
+
+.card:hover,
+.cardTarget {
+ z-index: 1000;
+ // position: absolute;
+ // left: 10%;
+ // left: 50vw;
+ // width: 100%;
+}
+
+.contenedorTarjetas {
+ width: 100%;
+ // background: #000;
+ position: relative;
+}
+
+
+
+/* Atracos */
+.cardTarget .card-inner {
+ transform: rotateY(-180deg);
+
+ @include mq(pc) {
+  transform: rotateY(-180deg) translate(25%, -25%);
+  width: 140%;
+
+ }
+
+}
+@include mq(pc) {
+ .card:hover .card-inner {
+  transform: rotateY(-180deg);
+
+  @include mq(pc) {
+   transform: rotateY(-180deg) translate(25%, -25%);
+   width: 140%;
+
+  }
+
+ }
+
+}

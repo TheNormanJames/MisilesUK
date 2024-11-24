@@ -1,0 +1,120 @@
+mixin SuperSlidersPug(SuperSlidersInfo)
+  //- -----------------
+  //- Navegadores
+  //- -----------------
+  //- .container-pc.relative
+  //-   .sliders_navegadores-container
+  //-     .sliders_navegadores
+  //-       each btn in SuperSlidersInfo.titulo
+  //-         span.sliders_navegador
+
+
+
+  //- -----------------
+  //- Swiper Phone
+  //- -----------------
+  .sliderTouch_area
+    .sliderTouch-container.no-pc
+      each imgName, index in SuperSlidersInfo.titulo
+        .slideTouch
+          .slideTouch-content
+            if SuperSlidersInfo.video
+              .section_videoContainer
+                a(href=`#video${SuperSlidersInfo.sectionName}${index}`).section_videoThumbnail--Container
+                  img(src=`${imgURL}${SuperSlidersInfo.sectionName}${index + 1}.${SuperSlidersInfo.extension}`, alt="", loading='lazy')
+                h3.swiper-content_titulo= `${SuperSlidersInfo.titulo[index]}`
+                .section_video--notes
+                  if !SuperSlidersInfo.notas1[index] == ''
+                    a(href=`${SuperSlidersInfo.notas1[index]}` target="_blank").section_video--note
+                  //- a(href=`${SuperSlidersInfo.notas1[index]}`).section_video--note
+                  if !SuperSlidersInfo.notas2[index] == ''
+                    a(href=`${SuperSlidersInfo.notas2[index]}` target="_blank").section_video--note
+                  if !SuperSlidersInfo.notas3[index] == ''
+                    a(href=`${SuperSlidersInfo.notas3[index]}` target="_blank").section_video--note
+            else
+              img(src=`${imgURL}${SuperSlidersInfo.img[index]}.${SuperSlidersInfo.extension}`, loading='lazy')
+              .swiper-content_text
+                h3.swiper-content_titulo= `${SuperSlidersInfo.titulo[index]}`
+                p.swiper-content_parrafo= `${SuperSlidersInfo.parrafo[index]}`
+          //- img(src=`${imgURL}${SuperSlidersInfo.img[0]}1-m.svg`).slideTouch-content
+
+          //- img(src=`${imgURL}Frase4-m.svg` class=`swiper-content` alt=`` loading="lazy")
+  //- -----------------
+  //- Slider PC
+  //- -----------------
+  .relative
+    .container-sliderAutomatico.sliderAutomatico--stop.no-phone
+      div(id=`sliderAutomatico${SuperSlidersInfo.numero}` class= SuperSlidersInfo.video ? "dosVideos-container" : "").sliderAutomatico
+        //- //- -----------------
+        //- //- Navegadores
+        //- //- -----------------
+        //- //- .container-pc.relative
+        //- .sliders_navegadores-container
+        //-   .sliders_navegadores
+        //-     each btn in SuperSlidersInfo.titulo
+        //-       span.sliders_navegador
+        each imgName, index in SuperSlidersInfo.img
+          //- div(class= SuperSlidersInfo.video ? "dosVideos").sliderAutomatico__section
+          div(class= SuperSlidersInfo.video ? `${SuperSlidersInfo.sizeDosVideos} dosVideos` : "").sliderAutomatico__section
+            .swiper-content
+              if SuperSlidersInfo.video
+                .section_videoContainer
+                  a(href=`#video${SuperSlidersInfo.sectionName}${index}`).section_videoThumbnail--Container
+                    img(src=`${imgURL}${SuperSlidersInfo.sectionName}${index + 1}.${SuperSlidersInfo.extension}`, alt="", loading='lazy')
+                  h3.swiper-content_titulo= `${SuperSlidersInfo.titulo[index]}`
+                  .section_video--notes
+                    if !SuperSlidersInfo.notas1[index] == ''
+                      a(href=`${SuperSlidersInfo.notas1[index]}` target="_blank").section_video--note
+                    //- a(href=`${SuperSlidersInfo.notas1[index]}`).section_video--note
+                    if !SuperSlidersInfo.notas2[index] == ''
+                      a(href=`${SuperSlidersInfo.notas2[index]}` target="_blank").section_video--note
+                    if !SuperSlidersInfo.notas3[index] == ''
+                      a(href=`${SuperSlidersInfo.notas3[index]}` target="_blank").section_video--note
+
+              else
+                img(src=`${imgURL}${SuperSlidersInfo.img[index]}.${SuperSlidersInfo.extension}` alt=`${SuperSlidersInfo.titulo[index]}` title =`${SuperSlidersInfo.titulo[index]}` loading="lazy")
+                .swiper-content_text.elEspecial
+                  h3.swiper-content_titulo= `${SuperSlidersInfo.titulo[index]}`
+                  p.swiper-content_parrafo= `${SuperSlidersInfo.parrafo[index]}`
+
+        //- -----------------
+        //- Original
+        //- -----------------
+        .sliderAutomatico__btn.sliderAutomatico__btn--right
+        .sliderAutomatico__btn.sliderAutomatico__btn--left
+  if SuperSlidersInfo.video
+    each imgName, index in SuperSlidersInfo.img
+      div(id=`video${SuperSlidersInfo.sectionName}${index}`).modal_videoContainer
+        .modal_videoContainer--content
+          //- a(href="#videoThumbnail1" class="closeBtn--video") Cerrar | &#8855
+          span.closeBtn--video Cerrar | X;
+          iframe(src=`https://www.youtube.com/embed/${SuperSlidersInfo.youtube[index]}` title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' loading='lazy' class="modal_video")
+      style= `#video${SuperSlidersInfo.sectionName}${index}:target{display: flex;animation: .3s JumpIn ease-in-out forwards;} `
+      //- .dosVideos{width: ${SuperSlidersInfo.titulo.length}% !important;}
+
+
+
+
+//- -----------------
+//- Slider Dignidad
+//- -----------------
+  -
+    var SuperSlidersInfo = {
+        'numero': '2',
+        'img': [
+          'AlejandraMiller',
+          'AlfredoMolano',
+          'AngelaSalazar',
+          ],
+        'extension': 'jpg',
+        'titulo': [
+          'Alejandra Miller',
+          'Alfredo Molano',
+          'Ángela Salazar (Q. E. P. D.)',
+          ],
+        'parrafo': [
+          'Texto',
+          'Texto',
+          'Texto',
+        ]}
+  +SuperSlidersPug(SuperSlidersInfo)

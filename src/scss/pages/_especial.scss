@@ -1,0 +1,9 @@
+.iconoPrincipal {
+ width: min(120px, 90%);
+ @extend .marginAuto;
+}
+
+.imgCohete {
+ margin-top: 3rem;
+ margin-bottom: 4rem;
+}

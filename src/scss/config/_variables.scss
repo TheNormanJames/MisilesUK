@@ -1,0 +1,178 @@
+:root {
+ --section-items: 4;
+}
+
+
+$prefijo: "NNJ";
+$barra-ElTiempo:55px;
+$barra-subscripcion:41px;
+
+$imgURL: "../../assets/";
+/*===============================================
+                    Colors
+================================================*/
+$color-primary:#B14A4A;
+$color-secondary:#421F05;
+$color-tertiary:#F5CF84;
+$color-cuartiary:#F69F1E;
+$color-accent:#6786B1;
+$color-White:#FFF;
+$color-Black: #303030;
+// $color-Black-opacity: rgba($color-Black, 0.8);
+$color-Black-opacity: rgba(#000, 0.85);
+
+
+$color-5: #B28808;
+
+
+/* Text */
+$color-titulo: #F2F2F2;
+$color-text:#B14A4A;
+$color-text2:#6D4545;
+$color-text-paragraph: #303030;
+$color-text-modal: #434343;
+$color-text-modal-purple: #8E7A95;
+
+/* Background */
+$color-background:#fee4a7;
+$color-background2:#0A041F;
+$color-background-extra:#3B3E4A;
+$color-background-accent: #F2F4F3;
+
+
+/* filters */
+// Dark
+$colorDark-primary:darken($color-primary, 15%);
+$colorDark-secondary:darken($color-secondary, 15%);
+$colorDark-tertiary:darken($color-tertiary, 15%);
+
+// Light
+$colorLight-primary:lighten($color-primary, 15%);
+$colorLight-secondary:lighten($color-secondary, 15%);
+$colorLight-tertiary:lighten($color-tertiary, 15%);
+/* Fin Filters */
+
+/* Frames */
+$color-frame: #d6953e;
+
+/* Modales */
+
+
+
+
+
+
+/*===============================================
+                    Sizes
+================================================*/
+$width-button: 150px; //No tomar valor enserio
+
+
+/*===============================================
+                      Layout
+================================================*/
+$gutter:1.25rem;
+$gutter2:$gutter * 2;
+$gutter3:$gutter2 * 2;
+
+$z-index-back:-1;
+$z-index-normal:1;
+$z-index-absoluta:10;
+$z-index-modal:100;
+$z-index-popup:500;
+$z-index-fix:1000;
+
+
+/*===============================================
+                Media Querys
+================================================*/
+/*Maps*/
+$breakpoints: ( // xs: 30em,
+ phone: 480px,
+ /* 480 / 16  */
+ //Phone
+ // s: 37.5em,
+
+ phoneL: 600px,
+ /* 600 / 16  */
+ //Tablet 8"
+ // m: 45em,
+
+ tablet: 800px,
+ /* 720 / 16 */
+ // Tablet 100"
+ // l: 64em,
+
+ tabletL: 900px,
+
+ // pc: 1024px,
+ pc: 1100px,
+ /* 1024 / 16 */
+ // Notebook
+ // xl: 75em
+ pcM: 1200px,
+ /* 1200/ 16 */
+
+ pcL: 1500px // Pantallas mas grandes
+ /* 1500/ 16 */
+);
+
+/*===============================================
+==========     Width Responsive        ===========
+================================================*/
+$width-phone:min(90%, map-get($breakpoints, phone));
+$width-phoneL:min(90%, map-get($breakpoints, phoneL));
+$width-tablet:min(90%, map-get($breakpoints, tablet));
+$width-tabletL:min(90%, map-get($breakpoints, tabletL));
+$width-pc:min(90%, map-get($breakpoints, pc));
+$width-pcM:min(90%, map-get($breakpoints, pcM));
+$width-pcL:min(90%, map-get($breakpoints, pcL));
+
+
+
+/*===============================================
+                    Typography
+================================================*/
+$fontFamily: "adelle",
+serif;
+$fontFamily2: "adelle-sans",
+sans-serif;
+$fontFamily3: "adelle-sans",
+sans-serif;
+// $fontFamily6: "stretch-pro-regular",
+// serif;
+;
+
+
+// $h1:9.375rem; //150px
+
+$h1:clamp(1rem, 2.4vw, 56px); //40px
+$subtitulo:clamp(1rem, 2.4vw, 45px); //40px
+$h2:clamp(1rem, 2.4vw, 45px); //40px
+$h3:clamp(1rem, 2.4vw, 45px); //25px
+$h4:clamp(1rem, 2.4vw, 45px); //22px
+
+
+$section-titulo:clamp(1rem, 2.4vw, 45px); //35
+
+$p-xl:clamp(1rem, 2.4vw, 45px); //28
+$p-l:clamp(1rem, 2.4vw, 45px); //26
+$p-20:clamp(1rem, 2.4vw, 45px); //20
+$p:clamp(17px, 2vw, 17px); //18
+$p-14:clamp(1rem, 2.4vw, 45px); //14
+
+$modal-titulo:clamp(1rem, 2.4vw, 45px); //50
+$modal-subTitulo:clamp(1rem, 2.4vw, 45px); //30
+$modal-subTitulo-movil:clamp(1rem, 2.4vw, 45px); //19
+
+$lineHeight:30px;
+$lineHeight-pc:24px;
+
+
+/*=================== Start ============================
+    Especial
+*/
+$anchoFull: calc(100vh * 1.22);
+/*
+    Especial
+======================= End =========================*/

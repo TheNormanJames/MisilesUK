@@ -1,0 +1,50 @@
+{
+ "name": "the-norman-james-boilerplate",
+ "version": "1.1.0",
+ "description": "Boilerplate creado para automatizar procesos y componentes FrontEnd (Pug,Sass,JS)",
+ "main": "src/index.js",
+ "author": "The Norman James <normane_@hotmail.com>",
+ "license": "Apache License 2.0",
+ "scripts": {
+  "start-sin-serve": "webpack --mode development --open --port 333",
+  "start": "webpack serve  --mode development --open",
+  "build": "webpack --mode production",
+  "dev": "webpack --mode development",
+  "imagemin": "imagemin \"./src/img/**.+(jpg|png)\" --out-dir ./build/assets/ -p=pngquant -p=jpeg-recompress"
+ },
+ "keywords": [],
+ "devDependencies": {
+  "@babel/core": "7.16.0",
+  "@babel/preset-env": "7.16.0",
+  "autoprefixer": "9.8.8",
+  "babel-loader": "8.2.3",
+  "clean-webpack-plugin": "4.0.0",
+  "copy-webpack-plugin": "5.0.3",
+  "css-loader": "5.2.7",
+  "file-loader": "6.2.0",
+  "html-loader": "3.0.1",
+  "html-webpack-plugin": "5.5.0",
+  "image-webpack-loader": "8.0.1",
+  "mini-css-extract-plugin": "2.4.4",
+  "node-sass": "6.0.1",
+  "postcss": "8.3.11",
+  "postcss-loader": "3.0.0",
+  "postcss-preset-env": "6.7.0",
+  "pug": "3.0.2",
+  "pug-loader": "2.4.0",
+  "purgecss-webpack-plugin": "4.0.3",
+  "sass": "1.43.4",
+  "sass-loader": "12.3.0",
+  "style-loader": "3.3.1",
+  "webpack": "5.61.0",
+  "webpack-cli": "4.9.1",
+  "webpack-dev-server": "4.4.0",
+  "webpack-merge": "5.8.0",
+  "webpack-pwa-manifest": "4.0.0"
+ },
+ "browserslist": "> 0.25%, not dead, not ie 11",
+ "dependencies": {
+  "core-js": "3.19.1",
+  "memfs": "^4.6.0"
+ }
+}

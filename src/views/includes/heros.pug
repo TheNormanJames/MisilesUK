@@ -1,0 +1,60 @@
+include ../includes/redesSociales.pug
+
+//- ? Tiene 2 Versiones. El 1ro con imagen y logo. El 2do Imagen y Redes
+
+
+//- +fullHeroPug()
+mixin fullHeroPug(fullHeroInfo)
+
+ //- Version 1
+ //- Video
+ //- .fullHero
+ //-   //- video(autoplay='' muted='' loop='' poster='' playsinline='').header_video
+ //-   //-   source(src=`${imgURL}${fullHeroInfo.videoName}.mp4` type='video/mp4')
+ //-   picture
+ //-     //- El navegador coge el primero que cumpla con los requisitos
+ //-     source(media=`(min-width: 768px)` srcset=`${imgURL}${fullHeroInfo.imgName}.${fullHeroInfo.imgExtension}${imgQuery}`)
+ //-     //- source(media=`(min-width: 440px)` srcset=`${imgURL}LogoAper-Mobile.svg`)
+ //-     //- source(media=`(max-width: 399px)` srcset=`${imgURL}LogoAper-Mobile.svg`)
+ //-     //- Por si hay un error o las imágenes de arriba no cumple con ninguna mediaQuery carga éste
+ //-     img(src=`${imgURL}${fullHeroInfo.imgNameMobil}.${fullHeroInfo.imgExtension}${imgQuery}` class=`header_logo` alt=`Portada del Especial De ${especialTitulo} ` loading="lazy")
+ //- .fullHero-infoContainer
+ //-   .fullHero-logo
+ //-     img(src=`${imgURL}${fullHeroInfo.logoName}.${fullHeroInfo.logoExtension}${imgQuery}`, alt=`Logo del Especial De ${especialTitulo}` loading='lazy')
+ //-   .fullHero-textContainer
+ //-     p.fullHero-parrafo Durante años la historia se construyó a partir de los fósiles del hemisferio norte. Ahora, nuevas generaciones de paleontólogos colombianos han empezado a extraer de las rocas del país nuevo conocimiento de los animales y plantas que habitaron en el trópico hace millones de años.
+ //-     p.fullHero-parrafo Nuevas especies y géneros que están reescribiendo lo que sabemos del mundo que antecedió a los humanos. Y lo mejor es que es solo el comienzo.
+ //-     div.fullHero-btn#fullHero-btn.btn-click Seguir Leyendo
+
+ //- Version2 -> Hero Image con Redes
+ .fullHero_Image
+  picture
+   source(media=`(min-width: 921px)` srcset=`${imgURL }Aperturas/Apertura-D.png${imgQuery }`)
+   img(src=`${imgURL }Aperturas/Apertura-M.png${imgQuery }` class=`modal-imagen` alt=`Imagen de apertura del proyecto: ${especialTitulo  }` title=`Imagen de apertura del proyecto: ${especialTitulo  }`, loading="lazy")
+  //- .redes
+   -
+    var redesSociales = [
+     {
+     'name': 'email',
+     'link': `mailto:0?Subject=Te Comparto el Especial de El Tiempo "${especialTitulo}"&body=${textoRedesSociales}%20`,
+     },
+     {
+     'name': 'twitter',
+     'link': `https://twitter.com/intent/tweet?text=${textoRedesSociales}`,
+     },
+     {
+     'name': 'facebook',
+     'link': `https://www.facebook.com/sharer/sharer.php?u=`,
+     },
+    ]
+   +redesSociales(redesSociales)
+
+
+//- -
+//-         var fullHeroPug = {
+//-           imgName: "AperturaColombiaFosil",
+//-           imgExtension:'jpg',
+//-           logoName:'Logo',
+//-           logoExtension:'png',
+//-         }
+//-       +fullHeroPug(fullHeroPug)

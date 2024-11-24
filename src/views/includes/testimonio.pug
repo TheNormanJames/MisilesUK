@@ -1,0 +1,76 @@
+mixin Modaltestimonio(testimonioData)
+  figure.testimonio-container(class=testimonioData.color)
+    .testimonio-textContainer.container-l
+      //- header(id=`Testimonio-${testimonioData.numero}`)
+      p(id=`#Testimonio-${testimonioData.numero}`)
+        span.testimonio-numero= `Testimonio ${testimonioData.numero}`
+      .testimonio-textContent
+        blockquote
+          p.testimonio-text= testimonioData.titulo
+            if testimonioData.tituloBreak
+              span.testimonio-span.textBreak--block= testimonioData.tituloBreak
+        figcaption.testimonio-cita= testimonioData.cita
+          if testimonioData.citaBreak
+            cite= `${testimonioData.citaBreak}`
+      footer.testimonio-link
+        //- a(href=`"${testimonioData.link}"`) Leer #[span +]
+        a(href=`#testimonio${testimonioData.numero}`) Leer #[span +]
+  div(id=`testimonio${testimonioData.numero}` class=`modal`)
+    div(class=`modal-conteiner container-l ${testimonioData.color}`)
+      .fixed
+        a(href=`#Testimonio-${testimonioData.numero}` class="modalClose") ⨯
+        .modal-contenido(class=testimonioData.color)
+          picture
+            source(media=`(max-width: 250px)` srcset=`${imgURL}${testimonioData.url}-movil.png`)
+            source(media=`(max-width: 440px)` srcset=`${imgURL}${testimonioData.url}-movil.png 1x, ${imgURL}${testimonioData.url}-movil.png 2x`)
+            source(media=`(max-width: 920px)` srcset=`${imgURL}${testimonioData.url}.png`)
+            source(media=`(min-width: 921px)` srcset=`${imgURL}${testimonioData.url}.png 1x, ${imgURL}${testimonioData.url}.png 2x`)
+            img(src=`${imgURL}${testimonioData.url}.png` class=`modal-imagen` alt=`${testimonioData.alt}` loading="lazy")
+      if testimonioData.tituloModal
+        h3.modal-titulo= `${testimonioData.tituloModal}`
+      if testimonioData.subTituloModal
+        p.modal-subTitulo= `${testimonioData.subTituloModal}`
+          span.modal-subTitulo_border= `${testimonioData.subTituloModal_border}`
+      else
+        p.modal-subTitulo
+          span.modal-subTitulo_border= `${testimonioData.subTituloModal_border}`
+      .modal-parrafos
+        block
+
+//- Código para ejecutar le mix cuando se necesite.
+//- -
+//-   var testimonioInfo1 = {
+//-     numero: "2",
+  titulo: "‘Tuve que disfrazarme de indigente",
+  tituloBreak: "para buscar a mi hija de 15 años’",
+  cita: "Nathalie Amaya, ",
+  citaBreak:"madre de Lynda MichElle, desaparecida y asesinada.",
+  link: "#",
+  color: "purple",
+//-   }
+//- +testimonio(testimonioInfo1)
+
+
+//- mixin testimonioModal(testimonioModalInfo)
+
+//- -----------------
+//- Testimonios
+//- -----------------
+
+mixin testimonio(testimonioData)
+  figure.testimonio-container(class=testimonioData.color)
+    .testimonio-textContainer.container-l
+      //- header(id=`Testimonio-${testimonioData.numero}`)
+      p(id=`#Testimonio-${testimonioData.numero}`)
+        span.testimonio-numero= `Testimonio ${testimonioData.numero}`
+      .testimonio-textContent
+        blockquote
+          p.testimonio-text= testimonioData.titulo
+            if testimonioData.tituloBreak
+              span.testimonio-span.textBreak--block= testimonioData.tituloBreak
+        figcaption.testimonio-cita= testimonioData.cita
+          if testimonioData.citaBreak
+            cite= `${testimonioData.citaBreak}`
+      footer.testimonio-link
+        //- a(href=`"${testimonioData.link}"`) Leer #[span +]
+        a(href=`#testimonio${testimonioData.numero}`) Leer #[span +]

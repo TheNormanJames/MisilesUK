@@ -1,0 +1,287 @@
+@keyframes JumpIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+  // 0%   { top:10px;width: 0;
+  //   height: 0; }
+  // 100% { width: 100%;
+  //   height: 100vh;}
+}
+
+.modal {
+  // background: url("/src/assets/fondo-maradona2-m.png");
+  // background-size: cover;
+  // background-position: center;
+  // background: url("/src/assets/fondo-maradona-m2.png");
+  // background-size: cover;
+  // background-position: 55%;
+  width: 100%;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: $z-index-modal;
+  // display: flex;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  color: $color-text-modal;
+
+  font-family: $fontFamily3;
+
+  /* Función aparecer Modal con un click */
+  // opacity: 0;
+  display: none;
+  // transition: 3s;
+
+  @include mq(tablet) {
+    // background: url("/src/assets/fondo-maradona-d2.png");
+    background-size: cover;
+    background-position: center;
+    // width: 100%;
+  }
+
+  &-container {
+    // top: 25%;
+    // width: min(90%, 960px);
+    // height: 75%;
+    // position: absolute;
+    // background-color: rgba($color-White, .9);
+
+
+    top: 11%;
+    width: min(90%, 960px);
+    height: 83vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .9);
+
+    // overflow-y: scroll;
+    // overflow-x: hidden;
+    // text-align: right;
+    // padding-top: 2em;
+    @include mqmax(tablet) {
+      top: 21%;
+    }
+  }
+
+  &-closeBtn {
+    font-family: initial;
+    // font-weight: bold;
+    font-size: rem(65);
+    position: absolute;
+    // margin-left: -1.2em;
+    margin-top: .1em;
+    transition: .3s;
+    // background: $color-White;
+    // border-radius: 50%;
+    width: rem(75);
+    right: -2.5rem;
+    top: -5rem;
+    // height: rem(70);
+    // text-align: center;
+
+    @include mq(tablet) {
+      font-family: initial;
+      // font-weight: bold;
+      font-size: rem(65);
+      // position: fixed;
+      // margin-left: -1.2em;
+      margin-top: .1em;
+      transition: .3s;
+      // background: $color-White;
+      // border-radius: 50%;
+      width: rem(75);
+      // height: rem(70);
+      text-align: center;
+      right: initial;
+      top: 0;
+
+    }
+
+    &:hover {
+      color: $color-primary;
+
+    }
+
+
+  }
+
+  &-content {
+    padding-top: 15%;
+    padding-right: 6%;
+    padding-left: 12%;
+    margin-right: 3%;
+    text-align: left;
+
+    height: 100%;
+    overflow-y: scroll;
+
+    @include mq(phoneL) {
+      padding-right: 11%;
+
+    }
+
+    @include mqmax(phoneL) {
+      width: 90%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      // padding-bottom: 50%;
+      margin-bottom: 10rem;
+
+    }
+
+    // padding: 5%;
+  }
+
+  &-titulo {
+    font-family: $fontFamily2;
+    font-size: $h2;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3em;
+    font-size: $h4;
+    margin-top: 4em;
+    line-height: 25px;
+
+    @include mq(tablet) {
+      line-height: 46px;
+      font-size: $h2;
+      margin-top: 4rem;
+      margin-bottom: 3em;
+
+    }
+
+
+  }
+
+  &-figure {
+    font-family: $fontFamily3;
+    font-size: rem(15);
+    font-style: italic;
+    // font-weight: 500;
+    text-align: center;
+    margin-bottom: 3em;
+
+
+
+    @include mq(tablet) {
+      font-size: $p-20;
+
+    }
+
+    &_blockquote {
+      margin-bottom: 2em;
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+
+      &Parrafo {
+        line-height: 19px;
+        width: 100%;
+
+        @include mq(tablet) {
+          line-height: 24px;
+
+        }
+      }
+    }
+
+    &_figcaption {
+      display: flex;
+      flex-direction: column;
+      // font-weight: 600;
+      line-height: 22px;
+      font-style: normal;
+      font-family: $fontFamily4;
+
+      &-cite {
+        font-size: $p-14;
+        font-style: normal;
+        // font-weight: 300;
+        font-family: $fontFamily3;
+        height: 120px;
+      }
+    }
+  }
+
+  &-sumario {
+    // background: #000;
+    font-size: $p;
+    position: relative;
+    width: 89%;
+    margin-left: 10%;
+    margin-right: auto;
+    line-height: 31px;
+    padding-bottom: .5em;
+    margin-bottom: 2em;
+
+    // border-bottom: 2px solid currentcolor;
+    // &::before {
+    // content: url("/src/assets/letra-e.svg");
+    // height: 50px;
+    // width: 50px;
+    // position: absolute;
+    // left: -3em;
+    // }
+
+
+    &_span {
+      display: block;
+    }
+  }
+
+  &-tituloParrafo {
+    font-weight: normal;
+    font-size: $h4;
+  }
+
+  &-parrafos {
+    font-size: $p;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &-imgFull {
+    width: 120%;
+    margin-left: -10%;
+    // // height: 100%;
+    object-fit: cover;
+    // margin-top: -15%;
+
+    font-family: $fontFamily;
+  }
+
+  &-btn_VerMas {
+    text-align: center;
+
+    &-img {
+      margin-right: auto;
+      margin-left: auto;
+
+      width: 50%;
+    }
+  }
+
+  /*===============================================
+=============       Utilities         ===========
+================================================*/
+  &_finalPadding {
+    padding-bottom: 15%;
+  }
+
+}

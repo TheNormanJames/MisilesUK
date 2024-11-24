@@ -1,0 +1,66 @@
+mixin sliderBtnCss(sliderBtnCss)
+  .slider-container
+    .slider
+      .slides
+        each imgName, index in sliderBtnCss.img
+          div(id=`slides__${index}`).slide
+            picture.mapa
+              //- El navegador coge el primero que cumpla con los requisitos
+              //- source(media=`(min-width: 921px)` srcset=`${imgURL}ventana-abierta-m.png 1x, .${imgURL}ventana-abierta-m.png 2x`)
+              source(media=`(min-width: 768px)` srcset=`${imgURL}${imgName}.jpg${imgQuery}`)
+              //-source(media=`(min-width: 440px)` srcset=`${imgURL}ventana-abierta-m.png 1x, ${imgURL}ventana-abierta-m.png 2x`)
+              //-source(media=`(max-width: 399px)` srcset=`${imgURL}ventana-abierta-m.png`)
+              //- Por si hay un error o las imágenes de arriba no cumple con ninguna mediaQuery carga éste
+              img(src=`${imgURL}${imgName}-m.png${imgQuery}` alt=`Imagen descriptiva del proceso de Ucrania en la mitad del conflicto en ${sliderBtnCss.month[index]} de ${sliderBtnCss.year[index]}`, title=`Imagen descriptiva del proceso de Ucrania en la mitad del conflicto en ${sliderBtnCss.month[index]} de ${sliderBtnCss.year[index]}` loading="lazy")
+
+            //- img(src=`${imgURL}${imgName}.jpg?${sliderBtnCss.imgQuery}` alt=`Imagen descriptiva del proceso de Ucrania en la mitad del conflicto en ${sliderBtnCss.month[index]} de ${sliderBtnCss.year[index]}`, title=`Imagen descriptiva del proceso de Ucrania en la mitad del conflicto en ${sliderBtnCss.month[index]} de ${sliderBtnCss.year[index]}` loading="lazy")
+            if index == 0
+              a.slide__prev(href=`#slides__${sliderBtnCss.img.length -1}` title='Next')
+            else
+              a.slide__prev(href=`#slides__${index-1}` title='Next')
+            if index == sliderBtnCss.img.length-1
+              a.slide__next(href=`#slides__0` title='Next')
+            else
+              a.slide__next(href=`#slides__${index+1}` title='Next')
+    .slider__nav
+      each imgName, index in sliderBtnCss.img
+        a.slider__navlink(href=`#slides__${index}`)
+          .slider__navlink-text
+            span=`${sliderBtnCss.year[index]}`
+            span=`${sliderBtnCss.month[index]}`
+      .btnRojo
+      //- <input type="radio" name="tab" id="home" checked>
+      //- <input type="radio" name="tab" id="inbox">
+      //- <input type="radio" name="tab" id="contact">
+      //- <input type="radio" name="tab" id="heart">
+      //- <input type="radio" name="tab" id="about">
+
+      //-   #slides__1.slide
+      //-     img(src=`${imgURL}Conflicto-Rusia-Ucrania-OTAN-1.jpg` alt=`Logo de "La Verdad - Para reparar, sanar y no repetir"` loading="lazy")
+      //-     a.slide__prev(href='#slides__4' title='Next')
+      //-     a.slide__next(href='#slides__2' title='Next')
+      //-   #slides__2.slide
+      //-     span.slide__text 2
+      //-     a.slide__prev(href='#slides__1' title='Prev')
+      //-     a.slide__next(href='#slides__3' title='Next')
+      //-   #slides__3.slide
+      //-     img(src=`${imgURL}Conflicto-Rusia-Ucrania-OTAN-1.jpg` alt=`Logo de "La Verdad - Para reparar, sanar y no repetir"` loading="lazy")
+      //-     a.slide__prev(href='#slides__2' title='Prev')
+      //-     a.slide__next(href='#slides__4' title='Next')
+      //-   #slides__4.slide
+      //-     span.slide__text 4
+      //-     a.slide__prev(href='#slides__3' title='Prev')
+      //-     a.slide__next(href='#slides__1' title='Prev')
+      //- .slider__nav
+      //-   a.slider__navlink(href='#slides__1')
+      //-   a.slider__navlink(href='#slides__2')
+      //-   a.slider__navlink(href='#slides__3')
+      //-   a.slider__navlink(href='#slides__4')
+
+
+//- Formato para usar
+//- -
+//-   var preguntasInfo = [
+//-     'img': '¿Cuántas '
+//-   ]
+//- +sliderBtnCss(preguntasInfo)

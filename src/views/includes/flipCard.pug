@@ -1,0 +1,11 @@
+mixin flipCard(flipCardInfo)
+  .card
+    .card-inner
+      .front-face
+        picture
+          source(media=`(min-width: 921px)` srcset=`${imgURL}${flipCardInfo.imgCarpeta}/${flipCardInfo.imgName}-F.${flipCardInfo.imgExtension}${imgQuery} 1x`)
+          img(src=`${imgURL}${flipCardInfo.imgCarpeta}/${flipCardInfo.imgName}-F.${flipCardInfo.imgExtension}${imgQuery}` alt=`${especialTitulo}` title=`${especialTitulo}` )
+      .back-face
+        picture
+          source(media=`(min-width: 921px)` srcset=`${imgURL}${flipCardInfo.imgCarpeta}/${flipCardInfo.imgName}-B.${flipCardInfo.imgExtension}${imgQuery} 1x`)
+          img(src=`${imgURL}${flipCardInfo.imgCarpeta}/${flipCardInfo.imgName}-B.${flipCardInfo.imgExtension}${imgQuery}` alt=`${especialTitulo}` title=`${especialTitulo}` )

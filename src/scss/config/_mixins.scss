@@ -1,0 +1,41 @@
+ /*===============================================
+                  Media Query
+ ================================================*/
+// xs,s,m,l,xl
+@mixin mq($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (min-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}
+@mixin mqmax($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (max-width: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and (max-width: $bp) {
+      @content;
+    }
+  }
+}
+
+/*===============================================
+=============           REM            ===========
+================================================*/
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+// @include fontSize(32px);
+

@@ -1,0 +1,295 @@
+// @font-face {
+//   font-family: 'duplicate_ionic';
+//   src: url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Regular.eot");
+//   src: url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Regular.woff2") format("woff2"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Regular.woff") format("woff"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Regular.ttf") format("truetype"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Regular.svg#DuplicateIonic-Regular") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+
+// @font-face {
+//   font-family: 'open_sansbold';
+//   src: url("https://www.eltiempo.com/css/fonts/open_sans/OpenSans-Bold.eot");
+//   src: url("https://www.eltiempo.com/css/fonts/open_sans/OpenSans-Bold.eot?#iefix") format("embedded-opentype");
+//   src: url("https://www.eltiempo.com/css/fonts/open_sans/OpenSans-Bold.woff2") format("woff2"), url("https://www.eltiempo.com/css/fonts/open_sans/OpenSans-Bold.woff") format("woff"), url("https://www.eltiempo.com/css/fonts/open_sans/OpenSans-Bold.ttf") format("truetype"), url("https://www.eltiempo.com/css/fonts/open_sans/OpenSans-Bold.svg#open_sansbold") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: fallback
+// }
+// @font-face {
+//   font-family: 'duplicate_ionicbold';
+//   src: url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Bold.eot");
+//   src: url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Bold.eot?#iefix") format("embedded-opentype"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Bold.woff2") format("woff2"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Bold.woff") format("woff"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Bold.ttf") format("truetype"), url("https://www.eltiempo.com/css/fonts/duplicate-ionic/DuplicateIonic-Bold.svg#DuplicateIonic-Bold") format("svg");
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+}
+
+.flexRecomendados {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.patrocinados-cont a {
+  color: #000;
+}
+
+.patrocinados-cont a:link {
+  color: #000;
+}
+
+.patrocinados-cont a:hover {
+  color: #000;
+}
+
+.patrocinados-cont a:visited {
+  color: #000;
+}
+
+img {
+  width: 100%;
+  display: block;
+
+}
+
+.patrocinados-cont {
+  width: 1200px;
+  margin: auto;
+
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.titulo-modulo-patro {
+  margin-bottom: 20px;
+}
+
+p.titulo-patro {
+  font-family: "roboto_slab_bold";
+  font-family: "Roboto Slab";
+  font-family: 'duplicate_ionicbold';
+  font-family: $fontFamily;
+
+  font-size: 24px;
+  font-weight: bold;
+  color: $color-background;
+  color: $color-text;
+  margin-bottom: 0;
+  position: relative;
+  text-transform: uppercase;
+  width: 27%;
+
+
+  margin-left: 9px;
+
+}
+
+.contenido-modulo-patro {
+  justify-content: center;
+  width: 100%;
+}
+
+.sub-titulo-cont {
+  width: 30%;
+}
+
+p.titulo-patro::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: $color-secondary;
+  left: 0;
+  bottom: -4px;
+}
+
+p.sub-titulo-texto {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  width: 220px;
+  margin: auto;
+  margin-left: 67px;
+  margin-top: 100px;
+  position: relative;
+  color: #fff;
+}
+
+p.sub-titulo-texto::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -13px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 10px solid #fff;
+  border-bottom: 7px solid transparent;
+}
+
+.galeria-multi-titulo {
+  width: 85%;
+  background: #1D3557;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+  font-family: 'Roboto Slab';
+  font-size: 16px;
+  box-sizing: content-box;
+  font-family: "open_sansbold", sans-serif;
+  color: #FFF;
+  font-weight: 700;
+  transition: 0.2s;
+  position: relative;
+  z-index: 3;
+}
+
+
+.galeria-multi-imagen {
+  overflow: hidden;
+}
+
+.galeria-multi-imagen img {
+  transition: 0.2s;
+}
+
+.galeria-multi-elem:hover .galeria-multi-titulo {
+  background: $color-primary;
+  color: #fff;
+}
+
+.galeria-multi-elem:hover .galeria-multi-imagen img {
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+
+
+.galeria-multi-cont {
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.galeria-multi-elem {
+  margin-left: 20px;
+  min-width: 241px;
+  width: 25%;
+}
+
+.galeria-multi-wrapper {
+  align-items: flex-end;
+  transition: 0.3s;
+}
+
+.control-gal {
+  width: 30px;
+  height: 30px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+}
+
+.galeria-controles {
+  position: absolute;
+  width: 100%;
+  top: 127px;
+  justify-content: space-between;
+}
+
+.galeria-multi {
+  width: 100%;
+  position: relative;
+}
+
+.control-izq {
+  transform: rotate(-45deg);
+}
+
+.control-der {
+  transform: rotate(135deg);
+}
+
+
+@media only screen and (max-width:768px) {
+  .patrocinados-cont {
+      width: 100%;
+    margin-top: $gutter2;
+  }
+
+  p.titulo-patro {
+
+      font-size: 20px;
+
+  }
+
+  p.titulo-patro::after {
+      position: absolute;
+      content: "";
+      width: 70px;
+      height: 3px;
+      background: $color-background;
+      left: 0;
+      bottom: -5px;
+  }
+
+  p.titulo-patro {
+      width: 100%;
+  }
+
+  .sub-titulo-cont {
+      width: 100%;
+  }
+
+  .galeria-multi {
+      width: 100%;
+  }
+
+  p.sub-titulo-texto {
+
+      width: 90%;
+      margin: auto;
+      margin-left: 5%;
+      margin-top: 30px;
+
+  }
+
+  .galeria-multi-elem {
+      margin-left: 0;
+      width: 100%;
+  }
+
+  .galeria-controles {
+
+      top: 48%;
+
+  }
+
+  .galeria-multi-titulo {
+      width: 90%;
+      padding: 4px;
+
+  }
+
+  .galeria-multi-wrapper {
+      flex-wrap: wrap;
+  }
+}

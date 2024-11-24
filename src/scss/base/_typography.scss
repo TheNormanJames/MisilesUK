@@ -1,0 +1,45 @@
+@import url("https://use.typekit.net/aza2zzi.css");
+
+
+
+// Cargar la fuente en local
+// @font-face {
+//  font-family: "Cinematografica-Bold-trial";
+//  src: url("../assets/fonts/Cinematografica-Bold-trial.ttf");
+// }
+
+// @font-face {
+//  font-family: "stretch-pro-regular";
+//  src: url("../assets/fonts/stretch-pro-regular.otf");
+// }
+
+p {
+ font-family: $fontFamily2;
+ font-weight: 200;
+ color: $color-text;
+ font-size: 18px;
+ // font-weight: 300;
+ line-height: 1.33;
+ text-wrap: pretty;
+}
+
+h1 {
+ font-family: $fontFamily3;
+
+}
+
+h2 {
+ font-weight: 700;
+}
+
+h3 {
+ font-family: $fontFamily3;
+}
+
+h4 {
+ color: $color-text2;
+}
+
+.NNJ {
+ font-family: $fontFamily;
+}

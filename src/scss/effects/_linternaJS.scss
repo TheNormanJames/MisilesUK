@@ -1,0 +1,39 @@
+// :root {
+//   cursor: none;
+//   --cursorXpos: 50vw;
+//   --cursorYpos: 50vh;
+
+// }
+
+// :root::before {
+//   content: '';
+//   width: 100%;
+//   height: 100%;
+//   position: fixed;
+//   background: radial-gradient(circle 8rem at var(--cursorXpos) var(--cursorYpos),
+//       rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+//   z-index: 11;
+// }
+
+// body{
+//   background: #000;
+// }
+
+.linternaJS{
+  // background: #000;
+  --cursorXpos: 50vw;
+  --cursorYpos: 50vh;
+  cursor: none;
+}
+.linternaJS::before {
+  @include mq(tablet) {
+    content: '';
+    width: 100%;
+    height: 100%;
+    // position: fixed;
+    position: absolute;
+    background: radial-gradient(circle 15rem at var(--cursorXpos) var(--cursorYpos),
+        rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
+    z-index: $z-index-absoluta;
+  }
+}

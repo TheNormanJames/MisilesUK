@@ -1,0 +1,84 @@
+// .infographyContainer{
+//   /* Contenedor del especial propio */
+//   margin-top: $barra-ElTiempo + $barra-subscripcion;
+//   max-width: 100vw;
+//   @include mq(tablet) {
+//      margin-top: $barra-ElTiempo;
+//   }
+// }
+
+span {
+ color: inherit;
+}
+
+footer {
+ width: auto;
+}
+
+.top-contenedor {
+ position: absolute;
+}
+
+
+.NNJ {
+
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ main,
+ menu,
+ nav,
+ section,
+ summary {
+  // margin-bottom: 0 !important;
+  margin-bottom: 0;
+
+ }
+}
+
+.barraDelTiempo {
+ height: 100px;
+ width: 100%;
+ background: #21323F;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: $z-index-fix;
+
+ @include mq(pc) {
+  height: 60px;
+
+ }
+
+ // display: none;
+
+ &::after {
+  content: 'El Tiempo';
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-White;
+  font-size: rem(24);
+  text-transform: uppercase;
+  right: 0;
+  font-weight: bold;
+ }
+}
+
+
+// Publicidad
+.adunit-googleadmanager {
+ display: none;
+
+}
+
+header.especiales .header_mobile.stickyMobile {
+ z-index: 1100 !important;
+}

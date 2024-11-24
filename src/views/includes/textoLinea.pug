@@ -1,0 +1,19 @@
+mixin textoLinea(texto)
+  .container-l
+    h2.w-80.textoLinea=`${texto}`
+      span.linea
+
+mixin textoDobleLinea(texto1,texto2)
+  .container-l
+    h2.w-80.textoLinea
+      .div= `${texto1}`
+        span.textBreak--block= `${texto2}`
+      span.linea
+
+
+
+
+//- Formato
+//- +textoLinea('¿Cómo encontrarlas?')
+
+//- +textoDobleLinea('texto1','texto2')

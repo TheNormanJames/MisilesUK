@@ -1,0 +1,41 @@
+mixin recomendados-ElTiempo(recomendadosElTiempoInfo)
+  .patrocinados-cont
+    .titulo-modulo-patro
+      p.titulo-patro Vea otros reportajes
+    .contenido-modulo-patro.flexRecomendados
+      .galeria-multi
+        .galeria-multi-cont
+          .galeria-multi-wrapper.flexRecomendados
+            .galeria-multi-elem
+              a.link-nota-patro(href=`${recomendadosElTiempoInfo.enlace1}` target='_blank')
+                .galeria-multi-titulo=`${recomendadosElTiempoInfo.titulo1}`
+                .galeria-multi-imagen
+                   img(src=`${imgURL}imagen-recomendada-1.png${imgQuery}`, alt=`${especialTitulo}`, loading='lazy')
+            .galeria-multi-elem
+              a.link-nota-patro(href=`${recomendadosElTiempoInfo.enlace2}` target='_blank')
+                .galeria-multi-titulo=`${recomendadosElTiempoInfo.titulo2}`
+                .galeria-multi-imagen
+                   img(src=`${imgURL}imagen-recomendada-2.png${imgQuery}`, alt=`${especialTitulo}`, loading='lazy')
+            .galeria-multi-elem
+              a.link-nota-patro(href=`${recomendadosElTiempoInfo.enlace3}` target='_blank')
+                .galeria-multi-titulo=`${recomendadosElTiempoInfo.titulo3}`
+                .galeria-multi-imagen
+                   img(src=`${imgURL}imagen-recomendada-3.png${imgQuery}`, alt=`${especialTitulo}`, loading='lazy')
+            .galeria-multi-elem
+              a.link-nota-patro(href=`${recomendadosElTiempoInfo.enlace4}` target='_blank')
+                .galeria-multi-titulo=`${recomendadosElTiempoInfo.titulo4}`
+                .galeria-multi-imagen
+                   img(src=`${imgURL}imagen-recomendada-4.png${imgQuery}`, alt=`${especialTitulo}`, loading='lazy')
+
+//- -
+//-   var recomendadosElTiempo = {
+//-     "enlace1":"#",
+//-     "titulo1": "Titulo1",
+//-     "enlace2":"#",
+//-     "titulo2": "Titulo2",
+//-     "enlace3":"#",
+//-     "titulo3": "Titulo3",
+//-     "enlace4":"#",
+//-     "titulo4": "Titulo4"
+//-   }
+//- +recomendados-ElTiempo(recomendadosElTiempo)

@@ -1,0 +1,36 @@
+mixin redesSociales(enlaces)
+ .redesSociales
+
+  each enlace in enlaces
+   if enlace.name == 'facebook'
+    a(href=`${enlace.link}${redesEnlace}` target="_blank" , rel="noopener noreferrer" title=`${enlace.name}`).redesSociales__icon
+     i(class=`flaticon-${enlace.name}`)
+   else
+    a(href=`${enlace.link}:${redesEnlace}` target="_blank" , rel="noopener noreferrer" title=`${enlace.name}`).redesSociales__icon
+     i(class=`flaticon-${enlace.name}`)
+
+
+
+
+
+
+//- -
+//-   var redesSociales = [
+ {
+ 'name': 'whatsapp',
+ 'link': `https://wa.me/?text=Comparto el Especial de El Tiempo "${especialTitulo}"&body=${textoRedesSociales} `,
+ },
+//-     {
+//-     'name': 'email',
+//-     'link': `mailto:0?Subject=Te Comparto el Especial de El Tiempo "${especialTitulo}"&body=${textoRedesSociales} `,
+//-     },
+//-     {
+//-     'name': 'twitter',
+//-     'link': `https://twitter.com/intent/tweet?text=${textoRedesSociales} `,
+//-     },
+//-     {
+//-     'name': 'facebook',
+//-     'link': `https://www.facebook.com/sharer/sharer.php?u= `,
+//-     },
+//-   ]
+//- +redesSociales(redesSociales)

@@ -1,0 +1,370 @@
+/*
+Header
+Social Media
+*/
+
+.main-header {
+ // z-index: $z-index-fix;
+ // height: 100vh !important;
+ // background: url('../assets/Apertura/Apertura_Fondo.png') center bottom no-repeat;
+ // background: $color-background2;
+
+ position: relative;
+
+}
+
+
+
+// .logo-header {
+//  // max-width: 1000px;
+//  width: min(75%, 1000px);
+//  @extend .marginAuto;
+//  animation: ZoomMobile 2s ease-out forwards;
+
+//  @include mq(pc) {
+//   width: min(90%, 1000px);
+//   animation: Zoom 2s ease-out forwards;
+//  }
+// }
+
+
+
+//! Especial Atracos  */
+
+@keyframes tituloScaleHeader {
+ from {
+  // scale: .7;
+  transform: scale(0.7);
+  opacity: 0;
+ }
+
+ to {
+  transform: scale(1);
+  // scale: 1;
+  opacity: 1;
+ }
+}
+
+.mainHeader {
+ position: relative;
+ z-index: $z-index-fix;
+ @extend .flexCenter;
+
+ &-parte1 {
+
+  @include mq(pc) {
+
+   font-size: 10.2vw !important;
+  }
+
+  // display: none !important;
+ }
+
+ &-titulo {
+  color: $color-primary;
+  font-family: $fontFamily;
+  font-weight: normal;
+
+  @include mq(pc) {
+   opacity: 0;
+   animation: tituloScaleHeader .7s .3s ease-in-out forwards;
+   line-height: .8;
+   translate: -18% 0;
+  }
+
+  &1 {
+
+   font-size: clamp(90px, 20vw, 164px);
+
+   position: absolute;
+   top: 10%;
+   left: 0;
+   padding: .2em;
+
+   @include mq(pc) {
+    display: inline;
+
+    position: initial;
+   }
+
+   @include mqmax(pcL) {}
+
+   // display: block;
+  }
+
+  &2 {
+   font-size: clamp(90px, 20vw, 164px);
+   display: block;
+
+   @include mq(pc) {
+    display: inline;
+
+   }
+
+   @include mqmax(pc) {
+    right: 0;
+    position: absolute;
+    top: 30%;
+    padding: .2em;
+   }
+  }
+
+  &3 {
+   // font-size: clamp(90px,20vw,264px);
+   font-size: 90px;
+   display: block;
+
+   @include mqmax(pc) {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    padding: .2em;
+   }
+
+   @include mq(pc) {
+    font-size: 17vw;
+    translate: 40% 0px;
+    position: relative;
+
+    &::after {
+     content: '';
+     width: 70%;
+     height: 3px;
+     background: $color-secondary;
+     display: block;
+     position: absolute;
+     bottom: -20px;
+     left: 5px;
+
+     @include mq(pcL) {
+      width: 68%;
+      left: 10px;
+      bottom: -30px;
+
+     }
+    }
+   }
+
+
+  }
+ }
+
+ @keyframes headerAtracoImagen1 {
+  from {
+   translate: -50% 0;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ @keyframes headerAtracoImagen2 {
+  from {
+   translate: 0% -50%;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ @keyframes headerAtracoImagen3 {
+  from {
+   translate: 50% 0%;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ @keyframes headerAtracoImagen4 {
+  from {
+   translate: -50% 50%;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ @keyframes headerAtracoImagen5 {
+  from {
+   translate: 0% 50%;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ @keyframes headerAtracoImagen6 {
+  from {
+   translate: 50% 0%;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ @keyframes headerAtracoImagen7 {
+  from {
+   translate: 50% 50%;
+   opacity: 0;
+  }
+
+  to {
+   translate: 0 0;
+   opacity: 1;
+  }
+ }
+
+ &-img {
+  // display: none;
+  position: absolute;
+  width: 300px;
+  aspect-ratio: 16/9;
+  background: #000;
+  object-fit: cover;
+
+  &:nth-of-type(1) {
+   top: 0;
+   left: 0;
+   width: 35%;
+   animation: headerAtracoImagen1 .7s .1s ease-in-out forwards;
+
+   @include mq(pc) {
+
+    width: 23%;
+    height: 45%;
+    top: 0;
+    left: 0;
+    object-position: right;
+   }
+  }
+
+  &:nth-of-type(2) {
+   top: 77%;
+   left: 0;
+   width: 46%;
+   height: 22%;
+   animation: headerAtracoImagen2 .7s ease-in-out forwards;
+
+   @include mq(pc) {
+
+    width: 38%;
+    height: 22%;
+    top: 0;
+    left: 25%;
+    object-position: bottom;
+   }
+  }
+
+  &:nth-of-type(3) {
+   left: 0;
+   top: 26%;
+   width: 35%;
+   height: 35%;
+   animation: headerAtracoImagen3 .7s .2s ease-in-out forwards;
+   object-position: 25% 0;
+
+   @include mq(pc) {
+    object-position: left;
+
+    width: 35%;
+    height: 35%;
+    top: 0;
+    left: 65%;
+   }
+  }
+
+  &:nth-of-type(4) {
+
+   left: 39%;
+   top: 0;
+   width: 60%;
+   height: 30%;
+   animation: headerAtracoImagen4 .7s ease-in-out forwards;
+   object-position: left;
+
+   @include mq(pc) {
+
+    object-position: normal;
+    width: 37%;
+    height: 52%;
+    top: 48%;
+    left: 0%;
+   }
+  }
+
+  &:nth-of-type(5) {
+   top: 65%;
+   left: 65%;
+   width: 30%;
+   height: 10%;
+   animation: headerAtracoImagen5 .7s .2s ease-in-out forwards;
+
+   @include mq(pc) {
+
+    width: 38%;
+    height: 24%;
+
+    top: 76%;
+    left: 39%;
+   }
+  }
+
+  &:nth-of-type(6) {
+
+   top: 46%;
+   width: 55%;
+   left: 40%;
+   height: 15%;
+   animation: headerAtracoImagen6 .7s .1s ease-in-out forwards;
+
+   @include mq(pc) {
+
+    width: 21%;
+    height: 32%;
+
+    top: 39%;
+    left: 79%;
+   }
+  }
+
+  &:nth-of-type(7) {
+   top: 77%;
+   left: 50%;
+   width: 46%;
+   height: 22%;
+   animation: headerAtracoImagen7 .7s ease-in-out forwards;
+
+   @include mq(pc) {
+
+    width: 21%;
+    height: 25%;
+
+    top: 75%;
+    left: 79%;
+   }
+  }
+ }
+}
+
+.header_video {
+ width: 100%;
+}

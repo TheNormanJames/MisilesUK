@@ -1,0 +1,21 @@
+mixin testimonioModal(testimonioModalInfo)
+  div(id=`testimonio${testimonioModalInfo.numero}` class="modal")
+    div(class="modal-conteiner container-l")
+      a(href=`#Testimonio-${testimonioModalInfo.numero}` class="modalClose") ⨯
+      .modal-contenido
+        <img srcset="elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w"
+              sizes="(max-width: 600px) 480px,
+            800px"
+            src="elva-fairy-800w.jpg"
+            alt="Elva dressed as a fairy">
+        h3.modal-titulo= `${testimonioModalInfo.titulo}`
+        p.modal-subTitulo= `${testimonioModalInfo.subTitulo}`
+        .modal-parrafos
+          block
+
+        //- img(src=`../../assets/${testimonioModalInfo.url}.png`, alt=`${testimonioModalInfo.alt}`, class="modal-imagen", title=`${testimonioModalInfo.alt}`)
+        //- img(srcset=`../../assets/${testimonioModalInfo.url}-movil.png 220w, ../../assets/${testimonioModalInfo.url}-movil@2x.png 440w,../../assets/${testimonioModalInfo.url}.png 950w,../../assets/${testimonioModalInfo.url}@2x.png 1900w`
+        //-     sizes="(max-width: 600px) 480px, 800px"
+        //-     src=`../../assets/${testimonioModalInfo.url}.png`
+        //-     alt="Elva dressed as a fairy")

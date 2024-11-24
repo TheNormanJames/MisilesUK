@@ -1,0 +1,48 @@
+.btn {
+  width: 100%;
+
+  display: block;
+  background-color: transparent;
+  padding: 1rem 0;
+  border: 1px solid $color-frame;
+  margin-top: $gutter * 1.5;
+  margin-bottom: $gutter3;
+  cursor: pointer;
+  color: $color-text;
+  transition: 0.3s;
+  position: relative;
+
+  @include mq(tablet) {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover {
+    background-color: $color-text;
+    color: $color-White;
+  }
+
+  span {
+    color: $color-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: #000;
+    margin-top: 5rem;
+    font-weight: normal;
+    line-height: 1.5;
+    font-style: italic;
+    font-family: $fontFamily3;
+  }
+}
+
+
+.btn{
+  font-family: $fontFamily2;
+  font-weight: bold;
+  font-size: $p;
+  // text-transform: lowercase;
+}

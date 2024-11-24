@@ -1,0 +1,14 @@
+extends ../config/template
+include ../modules/components/picture.pug
+include ../modules/components/picture_webp.pug
+include ../modules/components/youtube_video.pug
+append config
+  //- Información para las "Redes sociales"
+  -pageTitle = 'BoilerPlate Jaimes'
+  -pageDescription = 'Paquete de incio para la creación de un sitio Web App - Norman Jaimes'
+  -pageImage = 'https://ed.team/sites/default/files/EDboilerplate-logo.png'
+
+block metatags
+  //- Agregar metatags de esta página personalizada
+block main
+  h1 Hola mundo

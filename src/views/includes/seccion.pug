@@ -1,0 +1,11 @@
+mixin sectionPug(section_info)
+  div(class=`${section_info.color}`).container-tablet
+    h2.section_titulo= section_info.titulo
+    p.section_subTitulo= section_info.subTitulo
+    .container-phone.contenedorRight
+      each parrafo in section_info.parrafo
+        p.section_parrafo= parrafo
+
+      a(href=`${section_info.verMas}` target="_blank" class=`color-${section_info.color}`).section_btn Ver Más
+  .container-tabletL.container-full--movil
+    iframe( src=`https://www.youtube.com/embed/${section_info.youtube}` title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='' loading="lazy").section_video

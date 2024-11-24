@@ -1,0 +1,98 @@
+.footer {
+ // background: url('../assets/Fondo-FULL.jpg') center bottom no-repeat;
+ background: transparent;
+ // width: 100%;
+ height: fit-content;
+ position: relative;
+ padding-block: 5rem !important;
+
+ // &::before {//  content: '';
+ //  z-index: -1;
+ //  width: 100%;
+ //  height: 100%;
+ //  // height: 100px;
+ //  background-size: 100% 100%;
+ //  // background-image: url('../assets/Fondo-FULL.jpg');
+ //  // background: #000;
+ //  display: inline-block;
+ //  position: absolute;
+ //  top: 0;
+ //  left: 0;
+ //  bottom: 0;
+ //  right: 0;
+ //  transform: rotate(180deg);
+ // }
+
+ & .infoText {
+  text-align: center;
+  font-style: italic;
+ }
+
+ &Titulo {
+  color: $color-primary;
+  font-family: $fontFamily;
+  font-size: clamp(50px, 4vw, 50px);
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 31px;
+  padding-top: 3rem;
+
+  @include mq(pc) {
+   padding-top: 0;
+
+  }
+
+  // columns: 200px;
+ }
+
+ .contenedor2-pc {
+
+  @include mq(pc) {
+   display: flex;
+  }
+ }
+
+ &-contenedorPersonas {
+  border-left: 4px solid $color-secondary;
+  padding-left: 8px;
+  margin-left: 15px;
+ }
+
+ &Area {
+  margin-bottom: 1.4rem;
+  font-family: $fontFamily;
+  font-weight: bold;
+  color: $color-primary;
+  font-size: clamp(20px, 2vw, 20px);
+  text-align: left;
+
+  @include mq(pc) {}
+ }
+
+ &Nombre {
+  display: block;
+  color: $color-text;
+  font-weight: 200;
+ }
+
+ &-datosAdicionales {
+  width: min(90%, 480px);
+  text-align: center;
+  @extend .marginAuto;
+ }
+
+ .columnSpan {
+  column-span: all;
+
+  @include mq(pc) {
+
+   margin-top: 2rem;
+  }
+ }
+
+
+}
+
+.footerFirstArea {
+ margin-top: 45px;
+}

@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+p {
+ line-height: $lineHeight;
+}
+
+button {
+ background: none;
+ border: none;
+ display: inline-block;
+}
+
+a {
+ text-decoration: none;
+ color: inherit;
+ list-style: none;
+}
+
+span {
+ color: inherit;
+}
+
+img {
+ width: 100%;
+ display: block;
+}
+
+video {
+ margin: 0;
+ display: block;
+}
+
+ul {
+ list-style: none;
+}
+
+audio {
+ max-width: 100%;
+}
+
+u {
+ text-decoration: underline;
+}

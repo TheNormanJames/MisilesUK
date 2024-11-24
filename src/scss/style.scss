@@ -1,0 +1,74 @@
+html {
+ // scroll-behavior: smooth;
+ // scroll-padding-top: 5rem;
+}
+
+/*
+This boilerplate is based in ITCSS and SMACSS
+*/
+
+/*Config*/
+// Variables, Funciones, Mixins
+@import './config/configPage';
+
+/* // Base and elements (generic) */
+// Tipografía, animaciones, utilidades
+@import './base/basePage';
+// }
+
+/* Vendors */
+// Librerias externas
+
+@import './vendors/flaticon/flaticon.css';
+@import './vendors/sliderSwiper';
+@import './vendors/sliderSwiperOriginal';
+
+// @import './vendors/normalize.css';
+
+.NNJ {
+ /* // LAYOUT
+// Escribe solo los estilos de layout (division en regiones del viewport) */
+ @import './layout/layoutPage';
+
+ /*===============================================
+=============   MODULOS (SMACSS) O COMPONENTES (ITCSS) ===========
+================================================*/
+ /*  Son los elementos de UI de tu interfaz, como botones, tablas, menus, etc.
+    Crea los archivos adicionales que necesites (uno por componente)     */
+
+ @import './components/componentsPage';
+
+ /* // Theme (colors and fonts) */
+ // @import "./theme/dark-theme";
+ // @import "./theme/typography";
+
+ /* Efects */
+ @import './effects/effectsPage';
+
+ /* // Utilities (hacks)
+// Todos los hacks que hayas necesitado para solucionar conflictos
+// o resolver situaciones extremas. Se espera poder mejorarlos luego. */
+ @import './hacks/hacks';
+
+ /* // Páginas web */
+ @import './pages/especial';
+}
+
+// Recomendados
+@import './themes/recomendados-ElTiempo';
+/*===============================================
+                    Estilos CMS
+================================================*/
+@import './CMS-ElTiempo/especialModular';
+
+.NNJ {
+ // overflow-x: hidden;
+ max-width: 100vw;
+ // background-color: $color-background;
+
+ // background: url('https://www.eltiempo.com/infografias/2024/11/MisilesUK/assets/FondoMultimedia.jpg?2') center / cover no-repeat;
+
+ @include mq(pc) {
+  // background: url('../assets/FondoD2.jpg?2');
+ }
+}

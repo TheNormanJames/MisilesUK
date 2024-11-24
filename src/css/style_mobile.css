@@ -1,0 +1,355 @@
+/* line 5, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font: inherit;
+ font-size: 100%;
+ vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+ line-height: 1;
+}
+
+/* line 24, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol,
+ul {
+ list-style: none;
+}
+
+/* line 26, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption,
+th,
+td {
+ text-align: left;
+ font-weight: normal;
+ vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q,
+blockquote {
+ quotes: none;
+}
+
+/* line 103, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+ content: "";
+ content: none;
+}
+
+/* line 32, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+ border: none;
+}
+
+/* line 116, ../../../../../../Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+ display: block;
+ /* margin-bottom: -36px !important; */
+}
+
+/* line 1, ../scss/common/_fuentes.scss */
+body {
+ width: 100%;
+ height: auto;
+ margin: 0 auto;
+}
+
+/* line 7, ../scss/common/_fuentes.scss */
+h1,
+h3,
+h4,
+h5,
+h6,
+p {
+ margin-bottom: 10px;
+}
+
+/* line 14, ../scss/common/_fuentes.scss */
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+li::selection,
+a::selection,
+span::selection,
+strong::selection,
+i::selection {
+ color: black;
+ background: blue;
+}
+
+/* line 19, ../scss/common/_fuentes.scss */
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+h5::-moz-selection,
+h6::-moz-selection,
+p::-moz-selection,
+li::-moz-selection,
+a::-moz-selection,
+span::-moz-selection,
+strong::-moz-selection,
+i::-moz-selection {
+ color: black;
+ background: blue;
+}
+
+/* line 25, ../scss/common/_fuentes.scss */
+b,
+strong {
+ font-weight: bold;
+}
+
+/* line 28, ../scss/common/_fuentes.scss */
+u {
+ text-decoration: underline;
+}
+
+/* line 31, ../scss/common/_fuentes.scss */
+i {
+ font-style: italic;
+}
+
+@font-face {
+ font-family: "FuentePruebas";
+ src: url("../media/fonts/myfont.eot");
+ src: url("../media/fonts/myfont.eot?#iefix") format("embedded-opentype"), url("../media/fonts/myfont.woff") format("woff"), url("../media/fonts/myfont.ttf") format("truetype"), url("../media/fonts/myfont.svg#FuentePruebas") format("svg");
+ font-style: normal;
+ font-weight: normal;
+}
+
+/* line 3, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .contentApertura {
+ display: none;
+}
+
+/* line 9, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .contentApertura.fondoOscuro .contenidoEspeciales,
+.especialesModulares .contentApertura.fondoBlanco .contenidoEspeciales {
+ display: none;
+}
+
+/* line 19, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .contentApertura.fondoOscuro .contenidoEspeciales .redes_mobile,
+.especialesModulares .contentApertura.fondoBlanco .contenidoEspeciales .redes_mobile {
+ margin-bottom: 0;
+}
+
+/* line 22, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .contentApertura.fondoOscuro .contenidoEspeciales .redes_mobile li span,
+.especialesModulares .contentApertura.fondoBlanco .contenidoEspeciales .redes_mobile li span {
+ vertical-align: baseline;
+}
+
+/* line 27, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .contentApertura.fondoOscuro .contenidoEspeciales .contenedor_redes,
+.especialesModulares .contentApertura.fondoBlanco .contenidoEspeciales .contenedor_redes {
+ position: relative;
+ bottom: 10px;
+}
+
+/* line 242, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .FondoRecomendados {
+ display: none;
+}
+
+/* line 329, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .titular {
+ color: #b8a56f;
+}
+
+/* line 373, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .Multiarticulo .titularArticulo .boton {
+ color: #000;
+}
+
+/* line 378, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .Multiarticulo .leadTitular {
+ color: #000;
+}
+
+/* line 384, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .Multiarticulo.sinFoto {
+ border-top: 5px solid #b8a56f;
+}
+
+/* line 391, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .Multiarticulo.sinFoto .boton {
+ color: #000;
+}
+
+/* line 397, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .Multiarticulo .foto-despliegueHomeGaleria {
+ border-bottom: 5px solid #b8a56f;
+}
+
+/* line 448, ../scss/components/_especiales_mobile.scss */
+.especialesModulares .scrollup {
+ display: none !important;
+}
+
+/* line 455, ../scss/components/_especiales_mobile.scss */
+footer .container_footer_mobile {
+ display: none;
+}
+
+/* line 459, ../scss/components/_especiales_mobile.scss */
+.img-tracking {
+ display: none;
+}
+
+.main-mobile-container .container .publicidad,
+.content_grid_margin.container_evolucion,
+.modulo_eto {
+ display: none;
+}
+
+.main-mobile-container .container .publicidad {
+ display: none;
+}
+
+.scrollup,
+.content_grid_margin.container_evolucion,
+.content_grid .content_grid_margin .container_col .col_fija,
+.container_liftigniter_article,
+.nuestro_mundo,
+.modulo_eto {
+ display: none !important;
+}
+
+.especialesModulares .contenedor_modulos_especiales .multiArticleContainer {
+ display: none;
+}
+
+#onesignal-bell-container {
+ display: none;
+}
+
+.header-share-options {
+ display: none;
+}
+
+.ad-unit {
+ display: none !important;
+}
+
+
+.header.especiales .header_mobile {
+
+ /* margin-bottom: -36px !important; */
+}
+
+.audioplayer.audioplayer-stopped {
+ display: none;
+}

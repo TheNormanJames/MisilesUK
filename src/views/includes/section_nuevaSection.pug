@@ -1,0 +1,15 @@
+mixin section_nuevaSection(section_nuevaSectionInfo)
+  each sectionInfo in section_nuevaSectionInfo
+    .section_nuevaSection--container
+      .section_nuevaSection--1
+        h4(class=`${section_nuevaSectionInfo.color}`).section_nuevaSection--titulo.none-pc= `${sectionInfo.titulo}`
+          span.textBreak--block= `${sectionInfo.tituloBreak}`
+        img(src=`${imgURL}${sectionInfo.img}.${sectionInfo.extension}`, loading='lazy',alt=`${sectionInfo.titulo} ${sectionInfo.tituloBreak}`).section_nuevaSection--img
+      .section_nuevaSection--2
+        h4.section_nuevaSection--titulo.no-phone= `${sectionInfo.titulo}`
+          span.textBreak--block= `${sectionInfo.tituloBreak}`
+        p.section_nuevaSection--parrafo= `${sectionInfo.parrafo}`
+        a(href= `${sectionInfo.enlace}` target="_blank").section_nuevaSection--enlace
+          .section_nuevaSection--btnContainer
+            span.section_nuevaSection--btnTexto Visitar
+            img(src=`${imgURL}boton-${sectionInfo.btn}.svg`, alt='', loading='lazy').section_nuevaSection--btn

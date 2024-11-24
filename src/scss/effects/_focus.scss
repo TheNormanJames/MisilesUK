@@ -1,0 +1,8 @@
+a:focus {
+  outline: 2px solid $color-primary;
+  outline-offset: 5px;
+}
+
+button:focus {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.35);
+}
