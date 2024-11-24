@@ -3,7 +3,25 @@
  @extend .marginAuto;
 }
 
+.max469 {
+ width: min(100%, 469px);
+}
+
 .imgCohete {
  margin-top: 3rem;
  margin-bottom: 4rem;
+}
+
+.articles {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 56px;
+ margin-top: 71px;
+
+}
+
+.grid-2col {
+ @include mqmax(pc) {
+  display: initial !important;
+ }
 }

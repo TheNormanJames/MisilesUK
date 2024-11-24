@@ -469,10 +469,10 @@ Containers
 
 .grid-2col {
  @extend .grid;
- grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
  @include mq(tablet) {
-  gap: 130px;
+  // gap: 130px;
 
  }
 
@@ -481,7 +481,7 @@ Containers
 .cuadriculaGridx3 {
  display: grid;
  gap: $gutter;
- grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
  margin-top: $gutter2;
  margin-bottom: $gutter2;
 }

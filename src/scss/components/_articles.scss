@@ -1,0 +1,33 @@
+.articleContent {
+ background: $color-primary;
+ padding: 27px 25px;
+}
+
+.articleTitle {
+ font-size: clamp(18px, 2vw + .5rem, 18px);
+ line-height: 27px;
+ color: #fff;
+}
+
+.articleLink {
+ color: #F5D9D9;
+ margin-top: 1em;
+ display: inline-block;
+ position: relative;
+ font-family: $fontFamily2;
+ font-size: clamp(16px, 2vw + .5rem, 16px);
+
+ &:hover {
+  scale: 1.1;
+ }
+
+ &::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  background: url('https://www.eltiempo.com/infografias/2024/11/MisilesUK/assets/PuntoBoton-Multi.svg') center no-repeat;
+  margin-right: .1em;
+  vertical-align: middle;
+  display: inline-block;
+ }
+}

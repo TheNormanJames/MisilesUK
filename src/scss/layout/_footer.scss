@@ -5,6 +5,7 @@
  height: fit-content;
  position: relative;
  padding-block: 5rem !important;
+ text-align: center;
 
  // &::before {//  content: '';
  //  z-index: -1;
@@ -23,26 +24,12 @@
  //  transform: rotate(180deg);
  // }
 
- & .infoText {
-  text-align: center;
-  font-style: italic;
- }
-
- &Titulo {
+ &Title {
   color: $color-primary;
   font-family: $fontFamily;
-  font-size: clamp(50px, 4vw, 50px);
-  text-align: left;
-  font-weight: 500;
-  margin-bottom: 31px;
-  padding-top: 3rem;
-
-  @include mq(pc) {
-   padding-top: 0;
-
-  }
-
-  // columns: 200px;
+  font-size: clamp(23px, 4vw, 23px);
+  line-height: 30px;
+  margin-bottom: 43px;
  }
 
  .contenedor2-pc {
@@ -52,27 +39,25 @@
   }
  }
 
- &-contenedorPersonas {
-  border-left: 4px solid $color-secondary;
-  padding-left: 8px;
-  margin-left: 15px;
- }
+ &-contenedorPersonas {}
 
  &Area {
   margin-bottom: 1.4rem;
-  font-family: $fontFamily;
+  font-family: $fontFamily2;
   font-weight: bold;
-  color: $color-primary;
-  font-size: clamp(20px, 2vw, 20px);
-  text-align: left;
+  color: #6D4545;
+  font-size: clamp(16px, 2vw, 16px);
 
   @include mq(pc) {}
  }
 
- &Nombre {
-  display: block;
-  color: $color-text;
-  font-weight: 200;
+ &Name {
+  @include mqmax(pc) {
+   display: block;
+
+  }
+
+  font-weight: normal;
  }
 
  &-datosAdicionales {
@@ -81,18 +66,5 @@
   @extend .marginAuto;
  }
 
- .columnSpan {
-  column-span: all;
 
-  @include mq(pc) {
-
-   margin-top: 2rem;
-  }
- }
-
-
-}
-
-.footerFirstArea {
- margin-top: 45px;
 }

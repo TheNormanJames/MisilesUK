@@ -59,16 +59,55 @@ html(lang="es")
     section.section.container-pc
      img(src=`${imgURL }Icono-Lanzamisiles.png${imgQuery }`, alt=`${especialTitulo }`, loading='lazy').iconoPrincipal
      .grid-2col
-      .col1
+      .col1.max469
        h2.sectionTitle ¿Cómo son los misiles ATACMS de Estados Unidos que Ucrania podrá usar contra territorio ruso?
        p.sectionParagraph Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
        p.sectionParagraph No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
        p.sectionParagraph Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+       picture
+        source(media=`(min-width: 921px)` srcset=`${imgURL }MisilAlcance-D.svg${imgQuery }`)
+        img(src=`${imgURL }MisilAlcance-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy").noMobile.marginTop
       .col2
        picture
         source(media=`(min-width: 921px)` srcset=`${imgURL }MisilInfo-D.svg${imgQuery }`)
         img(src=`${imgURL }MisilInfo-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy").imgCohete
        picture
         source(media=`(min-width: 921px)` srcset=`${imgURL }MisilAlcance-D.svg${imgQuery }`)
-        img(src=`${imgURL }MisilAlcance-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy")
-
+        img(src=`${imgURL }MisilAlcance-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy").noPC
+    section.section.container-pcM
+     h1 Animación
+    section.section.container-pcM
+     h1 Gráfico
+    section.section.container-pcM
+     h2.sectionSubTitle LEA MÁS ACERCA DEL CONFLICTO UCRANIA - RUSIA
+     .articles
+      article.article
+       img(src=`${imgURL }articulo.png${imgQuery }`, alt=`${especialTitulo }`, loading='lazy')
+       .articleContent
+        h3.articleTitle Titulo de la nota Titulo de la nota Titulo de la nota Titulo de la nota
+        a(href="#" target="_blank" rel="noopener noreferrer").articleLink Leer nota
+      article.article
+       img(src=`${imgURL }articulo.png${imgQuery }`, alt=`${especialTitulo }`, loading='lazy')
+       .articleContent
+        h3.articleTitle Titulo de la nota Titulo de la nota Titulo de la nota Titulo de la nota
+        a(href="#" target="_blank" rel="noopener noreferrer").articleLink Leer nota
+      article.article
+       img(src=`${imgURL }articulo.png${imgQuery }`, alt=`${especialTitulo }`, loading='lazy')
+       .articleContent
+        h3.articleTitle Titulo de la nota Titulo de la nota Titulo de la nota Titulo de la nota
+        a(href="#" target="_blank" rel="noopener noreferrer").articleLink Leer nota
+   footer.footer.container-pc
+    h4.footerTitle Créditos
+    .footer-contenedorPersonas
+     p.footerArea Diseño e infografía:
+      span.footerName  Daniel Celis
+     p.footerArea Maquetación:
+      span.footerName  Norman Jaimes
+     p.footerArea Modelado 3d y animación:
+      span.footerName  Luis Eduardo Jiménez
+     p.footerArea Directora de arte:
+      span.footerName  Sandra Rojas
+     p.footerArea Coordinador de Reportajes Multimedia:
+      span.footerName  David Alejandro López
+     p.footerArea Fuente informativa:
+      span.footerName  Fszñdffgdgz s
