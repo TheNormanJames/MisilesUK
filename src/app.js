@@ -11,25 +11,30 @@ import './scss/style.scss';
 // import './js/effects/loader';
 
 const mediaQuery = window.matchMedia('(min-width: 768px)');
-// Slider Variables
-let posicionNumero = 0;
-const totalSliderItems = document.querySelectorAll(
- '.sliderNNJ .sliderItem'
-).length;
-const sliderItems = document.querySelector('.sliderItems');
+
+// document.addEventListener('mouseover', e => {
+//  if (e.target.closest('.cls-10')) {
+//   console.log('asdf');
+
+//   document.getElementById('AlcanceMisil-Hover').classList.add('showHoverSVG');
+//  }
+// });
+// document.addEventListener('mouseout', e => {
+//  if (e.target.closest('.cls-10')) {
+//   console.log('asdf');
+
+//   document
+//    .getElementById('AlcanceMisil-Hover')
+//    .classList.remove('showHoverSVG');
+//  }
+// });
 
 document.addEventListener('click', e => {
- if (e.target.matches('#sliderArrowL')) {
-  posicionNumero--;
-  if (posicionNumero < 0) {
-   posicionNumero = totalSliderItems - 1;
-  }
+ if (e.target.closest('g[id*="-Hover"]')) {
+  let elementClicked = e.target.closest('g[id*="-Hover"]');
+  let elementSearched = document.getElementById(
+   elementClicked.id.replace('-Hover', '-Presionado')
+  );
+  elementSearched.classList.toggle('showSVG');
  }
- if (e.target.matches('#sliderArrowR')) {
-  posicionNumero++;
-  if (totalSliderItems <= posicionNumero) {
-   posicionNumero = 0;
-  }
- }
- sliderItems.style.translate = `-${posicionNumero}00% 0`;
 });
