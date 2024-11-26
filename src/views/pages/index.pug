@@ -10,7 +10,6 @@ block config
 
 
 include ../includes/loader.pug
-include ../includes/redesSociales.pug
 
 //- https://admin.beta.eltiempo.com.co/content/edit/591262
 //- https://www.eltiempo.com/infografias/2024/11/MisilesUK/scss/style_desktop.css = style_mobile.css
@@ -18,10 +17,10 @@ include ../includes/redesSociales.pug
 
 
 
-//- include ../includes/redesSociales.pug
 
 //- Heros
 //- include ../includes/heros.pug
+include ../includes/redesSociales.pug
 //- Recomendados
 //- include ../includes/recomendados-ElTiempo.pug
 
@@ -59,14 +58,22 @@ html(lang="es")
     section.section.container-pc
      img(src=`${imgURL }Icono-Lanzamisiles.png${imgQuery }`, alt=`${especialTitulo }`, loading='lazy').iconoPrincipal.scrollAnimation
      .grid-2col
-      .col1.max469
+      .col1.max498.relative
        h2.sectionTitle ¿Cómo son los misiles ATACMS de Estados Unidos que Ucrania podrá usar contra territorio ruso?
-       p.sectionParagraph Estados Unidos autorizó a Ucrania a utilizar el Sistema de Misiles Tácticos del Ejército en territorio ruso, algo que Kiev había pedido hace meses. Este armamento, conocido como ATACMS, puede impactar objetivos ubicados a unos 300 kilómetros de distancia y tienen una ojiva de explosión fragmentada de 226 kilogramos.
-       p.sectionParagraph ATACMS es un sistema de ataque superficie-superficie de alta precisión fabricado por la empresa estadounidense Lockheed Martin. Fueron utilizados con gran efectividad por primera vez durante la operación Tormenta del Desierto, entre 1990 y 1991, cuando una coalición liderada por Estados Unidos atacó Irak en respuesta a su invasión de Kuwait. Estos misiles se alimentan con cohetes propulsores sólidos y siguen una trayectoria balística hacia la atmósfera antes de volver a descender a gran velocidad y con un ángulo elevado, lo que dificulta su interceptación. Carga distintos tipos de explosivos, según el objetivo: 275 a 950 ojivas para atacar blancos vivos y de seis a 13 elementos autoguiados para afectar estructuras blindadas.
-       p.sectionParagraph Los misiles ATACMS disponen de un sistema de navegación inercial asistido por GPS y son propulsados por combustible sólido. Miden aproximadamente cuatro metros de longitud y tienen un diámetro de 60,96 centímetros. Tras la decisión de Washington, el Kremlin aprobó una nueva doctrina que permite utilizar armas nucleares ante ataques que supongan una “amenaza crítica” a su soberanía, lo cual elevó la tensión aún más.
-       picture
-        source(media=`(min-width: 921px)` srcset=`${imgURL }MisilAlcance-D.svg${imgQuery }`)
-        img(src=`${imgURL }MisilAlcance-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy").noMobile.marginTop2.scrollAnimation
+       -
+        var redesSociales = {
+         "facebook": `https://www.facebook.com/sharer/sharer.php?u=`,
+         "socialX": `https://twitter.com/intent/tweet?text=${textoRedesSociales}:`,
+         "whatsapp": `https://api.whatsapp.com/send?text=${textoRedesSociales}: `,
+        }
+       +redesSociales(redesSociales)
+       .max469
+        p.sectionParagraph Estados Unidos autorizó a Ucrania a utilizar el Sistema de Misiles Tácticos del Ejército en territorio ruso, algo que Kiev había pedido hace meses. Este armamento, conocido como ATACMS, puede impactar objetivos ubicados a unos 300 kilómetros de distancia y tienen una ojiva de explosión fragmentada de 226 kilogramos.
+        p.sectionParagraph ATACMS es un sistema de ataque superficie-superficie de alta precisión fabricado por la empresa estadounidense Lockheed Martin. Fueron utilizados con gran efectividad por primera vez durante la operación Tormenta del Desierto, entre 1990 y 1991, cuando una coalición liderada por Estados Unidos atacó Irak en respuesta a su invasión de Kuwait. Estos misiles se alimentan con cohetes propulsores sólidos y siguen una trayectoria balística hacia la atmósfera antes de volver a descender a gran velocidad y con un ángulo elevado, lo que dificulta su interceptación. Carga distintos tipos de explosivos, según el objetivo: 275 a 950 ojivas para atacar blancos vivos y de seis a 13 elementos autoguiados para afectar estructuras blindadas.
+        p.sectionParagraph Los misiles ATACMS disponen de un sistema de navegación inercial asistido por GPS y son propulsados por combustible sólido. Miden aproximadamente cuatro metros de longitud y tienen un diámetro de 60,96 centímetros. Tras la decisión de Washington, el Kremlin aprobó una nueva doctrina que permite utilizar armas nucleares ante ataques que supongan una “amenaza crítica” a su soberanía, lo cual elevó la tensión aún más.
+        picture
+         source(media=`(min-width: 921px)` srcset=`${imgURL }MisilAlcance-D.svg${imgQuery }`)
+         img(src=`${imgURL }MisilAlcance-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy").noMobile.marginTop2.scrollAnimation
       .col2
        picture
         source(media=`(min-width: 921px)` srcset=`${imgURL }MisilInfo-D.svg${imgQuery }`)
@@ -1152,3 +1159,6 @@ html(lang="es")
       span.footerName  David Alejandro López
      p.footerArea Fuente informativa:
       span.footerName  Fszñdffgdgz s
+
+
+

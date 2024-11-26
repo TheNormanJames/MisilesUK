@@ -1,25 +1,21 @@
+.socialBtn {
+ // display: inline-block;// // background: #000;
+ // padding: 1em;
+}
+
 .redesSociales {
  text-align: center;
- // margin-bottom: 70px;
- // border-top: 1px solid currentColor;
- // padding-top: 1rem;
- margin-top: 6px;
 
- position: absolute;
- // position: relative;
- top: 15vw;
- left: 59vw;
- height: 10px;
- font-size: 16px;
- animation: tituloScaleHeader 1s 1s ease-in-out forwards;
- opacity: 0;
+ @include mq(pc) {
+  text-align: left;
 
- @include mqmax(pc) {
-  display: none;
  }
 
+ margin-bottom: 1rem;
+
+
  &__icon {
-  color: $color-White;
+  color: $color-primary;
   // color: $color-frame;
   margin-left: auto;
   margin-right: auto;

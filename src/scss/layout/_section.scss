@@ -17,12 +17,12 @@
  &Title {
   text-align: center;
   font-family: $fontFamily;
-  font-size: clamp(27px, 2vw + .5rem, 27px);
+  font-size: clamp(27px, 2vw + .5rem, 38px);
   color: $color-primary;
-  line-height: 35px;
+  line-height: clamp(35px, 2vw + .5rem, 51px);
   text-wrap: pretty;
   margin-top: 45px;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 
   @include mq(pc) {
    text-align: left;
