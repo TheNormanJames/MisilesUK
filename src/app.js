@@ -41,6 +41,14 @@ document.addEventListener('click', e => {
   );
   elementSearched.classList.toggle('showSVG');
  }
+ console.log(e.target);
+ if (e.target.closest('g[id*="Zona-"]')) {
+  let elementClicked = e.target.closest('g[id*="Zona-"]');
+  let elementSearched = document.getElementById(
+   elementClicked.id.replace('Zona-', '-PresionadoM')
+  );
+  elementSearched.classList.toggle('showSVG');
+ }
 });
 
 // // /*===============================================
