@@ -109,28 +109,28 @@ This boilerplate is based in ITCSS and SMACSS
  }
 
  .contenedor2-pc {
-
   @include mq(pc) {
    display: flex;
   }
  }
 
- &-contenedorPersonas {}
+ &-contenedorPersonas {
+ }
 
  &Area {
   margin-bottom: 1.4rem;
   font-family: $fontFamily2;
   font-weight: bold;
-  color: #6D4545;
+  color: #6d4545;
   font-size: clamp(16px, 2vw, 16px);
 
-  @include mq(pc) {}
+  @include mq(pc) {
+  }
  }
 
  &Name {
   @include mqmax(pc) {
    display: block;
-
   }
 
   font-weight: normal;
@@ -141,6 +141,84 @@ This boilerplate is based in ITCSS and SMACSS
   text-align: center;
   @extend .marginAuto;
  }
+}
 
+.contenedorTrustProject {
+ @include mq(pc) {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  margin-bottom: 2rem;
+ }
+ .col1 {
+  width: min(70%, 400px);
+  @extend .marginAuto;
+  margin-bottom: 3rem;
 
+  @include mq(pc) {
+   margin-bottom: 0;
+  }
+ }
+ .col2 {
+  @include mq(pc) {
+   border-left: 1px solid #6d4545;
+   padding-left: 2rem;
+  }
+ }
+ .description {
+  font-size: 15px;
+  color: #191919;
+  font-family: $fontFamily2;
+  line-height: 23px;
+  margin-bottom: 10px;
+ }
+ .enlace {
+  color: #b24a4a;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: $fontFamily2;
+  margin-top: 12px;
+  display: inline-block;
+ }
+
+ .titulo {
+  color: #6d4545;
+  font-size: 15px;
+  font-family: $fontFamily2;
+  line-height: 23px;
+  font-weight: bold;
+  margin-bottom: 1em;
+ }
+
+ .parrafo {
+  color: #6d4545;
+  font-size: 15px;
+  font-family: $fontFamily2;
+  line-height: 23px;
+  font-weight: normal;
+  margin-bottom: 1em;
+ }
+ .titulo2 {
+  color: #6d4545;
+  font-size: 16px;
+  font-family: $fontFamily2;
+  line-height: 23px;
+  font-weight: bold;
+  margin-top: 36px;
+  margin-bottom: 31px;
+ }
+ .subtitulo {
+  color: #6d4545;
+  font-size: 14px;
+  font-family: $fontFamily2;
+  line-height: 23px;
+  font-weight: bold;
+  margin-top: 36px;
+ }
+
+ .enlaceTrust {
+  color: #b24a4a;
+  font-size: 15px;
+  font-family: $fontFamily2;
+  line-height: 23px;
+ }
 }

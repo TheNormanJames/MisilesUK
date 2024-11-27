@@ -29,7 +29,6 @@
  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
  gap: 56px;
  margin-top: 71px;
-
 }
 
 .grid-2col {
@@ -44,7 +43,6 @@
  margin-bottom: 40rem;
 
  @include mq(pc) {
-
   margin-bottom: 20rem;
  }
 }
@@ -53,7 +51,6 @@
  position: sticky;
  top: 0;
  translate: 0 25%;
-
 }
 
 .contenedorTextoScroll {
@@ -69,23 +66,20 @@
  }
 
  .sectionTitle {
-  font-size: clamp(23px, 2vw + .5rem, 23px);
+  font-size: clamp(23px, 2vw + 0.5rem, 23px);
   line-height: 30px;
   margin-bottom: 10rem;
 
   @include mq(pc) {
    margin-bottom: 29px;
-
   }
  }
 
  .sectionParagraph {
-  font-size: clamp(18px, 2vw + .5rem, 18px);
+  font-size: clamp(18px, 2vw + 0.5rem, 18px);
   line-height: 26px;
  }
 }
-
-
 
 // Xalok
 

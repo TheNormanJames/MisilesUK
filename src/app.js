@@ -62,6 +62,21 @@ document.addEventListener('mouseout', e => {
  }
 });
 
+const Zona_Alcance = document.getElementById('Zona-Alcance');
+var botones = document.querySelectorAll('.Croquis');
+
+function mostrarElemento(e) {
+ console.log('log');
+}
+
+botones.forEach(boton => {
+ boton.addEventListener('click', mostrarElemento);
+});
+
+Zona_Alcance.addEventListener('click', e => {
+ alert('asdasd');
+});
+
 document.addEventListener('click', e => {
  if (e.target.closest('g[id*="-Hover"]')) {
   let elementClicked = e.target.closest('g[id*="-Hover"]');
@@ -70,7 +85,7 @@ document.addEventListener('click', e => {
   );
   elementSearched.classList.toggle('showSVG');
  }
- console.log(e.target);
+ //  console.log(e.target);
  if (e.target.closest('g[id*="Zona-"]')) {
   let elementClicked = e.target.closest('g[id*="Zona-"]');
   let elementSearched = document.getElementById(
