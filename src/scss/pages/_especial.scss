@@ -41,7 +41,7 @@
 .contenedorImgScroll {
  position: relative;
  // margin-block: 20rem;
- margin-bottom: 33rem;
+ margin-bottom: 40rem;
 
  @include mq(pc) {
 
@@ -55,8 +55,6 @@
  translate: 0 25%;
 
 }
-
-#imgScroll {}
 
 .contenedorTextoScroll {
  position: absolute;
@@ -73,7 +71,12 @@
  .sectionTitle {
   font-size: clamp(23px, 2vw + .5rem, 23px);
   line-height: 30px;
-  margin-bottom: 29px;
+  margin-bottom: 10rem;
+
+  @include mq(pc) {
+   margin-bottom: 29px;
+
+  }
  }
 
  .sectionParagraph {
@@ -81,3 +84,44 @@
   line-height: 26px;
  }
 }
+
+
+
+// Xalok
+
+// <style> // .o-section--masespeciales .c-detail__title {
+//  text-align: center;
+//  font-family: "adelle", serif;
+//  font-size: clamp(27px, 2vw + .5rem, 38px);
+//  line-height: clamp(35px, 2vw + .5rem, 51px);
+//  color: #b14a4a;
+//  text-wrap: pretty;
+//  margin-top: 11rem;
+//  margin-bottom: 3rem;
+
+// }
+
+// @media screen and (min-width: 1100px){
+//  .o-section--masespeciales .c-detail__title{
+//   margin-top: 45px;
+//  }
+
+// }
+// .c-modular-article__txt {
+//  background: #b14a4a;
+//  padding: 27px 25px;
+// }
+
+// .c-modular-article__title a {
+//  font-size: clamp(18px, 2vw + .5rem, 18px);
+//  line-height: 27px;
+//  color: #fff;
+//  font-family: "adelle-sans", sans-serif;
+// }
+
+// .c-modular-article__subtitle {
+//  font-family: "adelle-sans", sans-serif;
+//  font-size: clamp(16px, 2vw + .5rem, 16px);
+//  color: #F5D9D9;
+// }
+// </style>

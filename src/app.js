@@ -95,7 +95,7 @@ document.addEventListener('scroll', e => {
    parseInt(scrollPosition / numeroCadaCuantoPixeles, 10) <= scrollTotalFrames
   ) {
    numeroScroll = parseInt(scrollPosition / numeroCadaCuantoPixeles, 10);
-   console.log(numeroScroll);
+   // console.log(numeroScroll);
   }
   if (numeroScroll == 0) {
    numeroScroll = 1;
