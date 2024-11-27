@@ -81,7 +81,8 @@ html(lang="es")
        picture
         source(media=`(min-width: 921px)` srcset=`${imgURL }MisilAlcance-D.svg${imgQuery }`)
         img(src=`${imgURL }MisilAlcance-M.svg${imgQuery }` class=`modal-imagen` alt=` Descripción de la imagen ${especialTitulo  }` title=` Descripción de la imagen ${especialTitulo  }`, loading="lazy").noPC.scrollAnimation
-    //- section.section.container-pcM
+    section.section.container-pcM
+      video(src=`${imgURL }LanzadorMisil-M.mp4${imgQuery }` class="youtube" id="videoReproductor") 
     //- #imgScroll3DMuseo
     //-   #imgScroll3DMuseo-sticky
     //-    #imgScroll3DMuseo-content
@@ -99,7 +100,7 @@ html(lang="es")
     
      //- h1 Gráfico
      .contenedorMapaArea
-      //- .contenedorMapa.noMobile
+      .contenedorMapa.noMobile
        img(src=`${imgURL }MapaUcraniaRusia-croquis.svg${imgQuery }`, alt=`${especialTitulo }`, loading='lazy').mapaFondo
        .mapaClick
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1919.21 960">
