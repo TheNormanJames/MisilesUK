@@ -46,7 +46,7 @@ document.addEventListener('click', e => {
 ================================================*/
 const contenedorImgScroll = document.getElementById('contenedorImgScroll');
 const imgScroll = document.getElementById('imgScroll');
-let numeroInicial = '0000';
+const contenedorTextoScroll = document.querySelector('.contenedorTextoScroll');
 // const imgScrollURL = `https://www.eltiempo.com/infografias/2024/11/MisilesUK/assets/Lanzador_D/lanza-misil0000.png?et11190836`
 
 // console.log(imgScroll.src);
@@ -77,11 +77,11 @@ function preloadImgs(url, nombreImg, extensionImg, numeroImgs, query) {
   console.log(img.src);
  }
 }
-
+mediaQuery;
 document.addEventListener('scroll', e => {
  let contenedorImgScrollBounding = contenedorImgScroll.getBoundingClientRect();
 
- if (contenedorImgScrollBounding.top <= 0) {
+ if (contenedorImgScrollBounding.top < 0) {
   // console.log(heightTotal);
 
   const scrollPosition =
@@ -91,7 +91,16 @@ document.addEventListener('scroll', e => {
   ) {
    numeroScroll = parseInt(scrollPosition / numeroCadaCuantoPixeles, 10);
   }
-  imgScroll.src = `https://www.eltiempo.com/infografias/2024/11/MisilesUK/assets/Lanzador_D/lanza-misil${numeroScroll}.png?et11190836`;
+  if (mediaQuery.matches) {
+   imgScroll.src = `${imgURL}/Lanzador_D/lanza-misil${numeroScroll}.png${imgQuery}`;
+  } else {
+   imgScroll.src = `${imgURL}/Lanzador_M/lanza-misil${numeroScroll}.png${imgQuery}`;
+  }
   // console.log(numeroScroll);
+  if (numeroScroll >= scrollTotalFrames) {
+   contenedorTextoScroll.classList.add('show');
+  } else {
+   contenedorTextoScroll.classList.remove('show');
+  }
  }
 });

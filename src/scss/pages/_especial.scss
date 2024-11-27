@@ -38,8 +38,46 @@
  }
 }
 
-#imgScroll {
+.contenedorImgScroll {
+ position: relative;
+ // margin-block: 20rem;
+ margin-bottom: 33rem;
+
+ @include mq(pc) {
+
+  margin-bottom: 20rem;
+ }
+}
+
+.contenedorAreaScroll {
  position: sticky;
  top: 0;
  translate: 0 25%;
+
+}
+
+#imgScroll {}
+
+.contenedorTextoScroll {
+ position: absolute;
+ top: 15%;
+ left: 50%;
+ translate: -50% 0;
+ visibility: hidden;
+
+ &.show {
+  opacity: 1;
+  visibility: visible;
+ }
+
+ .sectionTitle {
+  font-size: clamp(23px, 2vw + .5rem, 23px);
+  line-height: 30px;
+  margin-bottom: 29px;
+ }
+
+ .sectionParagraph {
+  font-size: clamp(18px, 2vw + .5rem, 18px);
+  line-height: 26px;
+ }
 }
