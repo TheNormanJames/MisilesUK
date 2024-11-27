@@ -56,11 +56,11 @@ let numeroScroll;
 
 let contenedorImgScrollBounding_height =
  contenedorImgScroll.getBoundingClientRect().width / 1.777;
-// let heightTotal = (contenedorImgScrollBounding_height * scrollTotalFrames) / 4;
-let heightTotal = (contenedorImgScrollBounding_height / 2) * scrollTotalFrames;
-contenedorImgScroll.style.height = parseInt(heightTotal, 10) + 'px';
+let heightTotal = (contenedorImgScrollBounding_height / 5) * scrollTotalFrames;
 
 let numeroCadaCuantoPixeles = parseInt(heightTotal, 10) / scrollTotalFrames;
+contenedorImgScroll.style.height =
+ parseInt(heightTotal + numeroCadaCuantoPixeles * 20, 10) + 'px';
 
 preloadImgs(
  `${imgURL}Lanzador_D/`,
@@ -74,29 +74,37 @@ function preloadImgs(url, nombreImg, extensionImg, numeroImgs, query) {
  for (let index = 0; index < numeroImgs; index++) {
   let img = new Image();
   img.src = `${url}${nombreImg}${index}.${extensionImg}${query}`;
-  console.log(img.src);
+  // console.log(img.src);
  }
 }
-mediaQuery;
 document.addEventListener('scroll', e => {
  let contenedorImgScrollBounding = contenedorImgScroll.getBoundingClientRect();
 
  if (contenedorImgScrollBounding.top < 0) {
-  // console.log(heightTotal);
+  const scrollPosition = Math.abs(contenedorImgScrollBounding.top);
 
-  const scrollPosition =
-   contenedorImgScroll.offsetTop - contenedorImgScrollBounding.top;
+  // console.log(Math.abs(contenedorImgScrollBounding.top));
+  // console.log(numeroCadaCuantoPixeles);
+
+  // console.log(
+  //  Math.abs(contenedorImgScrollBounding.top) / numeroCadaCuantoPixeles
+  // );
+
+  // contenedorImgScroll.offsetTop - contenedorImgScrollBounding.top;
   if (
    parseInt(scrollPosition / numeroCadaCuantoPixeles, 10) <= scrollTotalFrames
   ) {
    numeroScroll = parseInt(scrollPosition / numeroCadaCuantoPixeles, 10);
+   console.log(numeroScroll);
+  }
+  if (numeroScroll == 0) {
+   numeroScroll = 1;
   }
   if (mediaQuery.matches) {
    imgScroll.src = `${imgURL}/Lanzador_D/lanza-misil${numeroScroll}.png${imgQuery}`;
   } else {
    imgScroll.src = `${imgURL}/Lanzador_M/lanza-misil${numeroScroll}.png${imgQuery}`;
   }
-  // console.log(numeroScroll);
   if (numeroScroll >= scrollTotalFrames) {
    contenedorTextoScroll.classList.add('show');
   } else {

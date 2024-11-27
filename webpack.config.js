@@ -17,7 +17,7 @@ module.exports = {
 
   path: path.resolve(__dirname, './dist'),
   publicPath: '',
-  // publicPath: 'https://www.eltiempo.com/infografias/2024/11/MisilesUK/',
+  publicPath: 'https://www.eltiempo.com/infografias/2024/11/MisilesUK/',
  },
  devtool: 'source-map',
  optimization: {
