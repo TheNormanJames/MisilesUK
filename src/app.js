@@ -87,6 +87,7 @@ document.addEventListener('click', e => {
   let elementSearched = document.getElementById(
    elementClicked.id.replace('-Zona', '-PresionadoM')
   );
+  // console.log(elementSearched);
   // console.log(elementClicked.id.replace('-Zona', '-PresionadoM'));
   elementSearched.classList.toggle('showSVG');
  }
