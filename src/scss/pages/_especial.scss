@@ -143,10 +143,11 @@
  align-items: center;
  text-align: left;
  opacity: 0;
+ display: none;
  margin-top: 3rem;
  @include mq(pc) {
   position: absolute;
-  margin-top: -90px;
+  margin-top: 130px;
  }
 }
 
@@ -172,4 +173,12 @@
 
 .showText {
  opacity: 1;
+ display: block;
+}
+
+.TituloFueraMobile {
+ text-align: center;
+ margin-top: 5rem;
+ text-wrap: pretty;
+ margin-bottom: 0;
 }
