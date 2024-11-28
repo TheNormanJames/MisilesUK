@@ -15,15 +15,18 @@ const mediaQuery = window.matchMedia('(min-width: 768px)');
 const imgURL =
  'https://www.eltiempo.com/infografias/2023/07/museoNacional/assets/';
 const imgQuery = '?et07041901';
+let duration;
 
 const videoReproductor = document.getElementById('videoReproductor');
 
 if (mediaQuery.matches) {
  videoReproductor.src =
   'https://www.eltiempo.com/infografias/2024/11/MisilesUK/assets/LanzadorMisil-D.mp4?et11190836';
+ duration = 12000;
 } else {
  videoReproductor.src =
   'https://www.eltiempo.com/infografias/2024/11/MisilesUK/assets/LanzadorMisil-M.mp4?et11190836';
+ duration = 9000;
 }
 
 let options = {
@@ -36,8 +39,13 @@ function callback(entries, observer) {
  entries.forEach(entry => {
   if (entry.isIntersecting) {
    videoReproductor.play();
+   observer.unobserve(videoReproductor);
+   setTimeout(() => {
+    console.log(videoReproductor.duration);
+    document.getElementById('videoTexto').classList.add('showText');
+   }, duration);
   } else {
-   videoReproductor.pause();
+   //  videoReproductor.pause();
   }
  });
 }

@@ -120,3 +120,56 @@
 //  color: #F5D9D9;
 // }
 // </style>
+
+.container-phoneL640 {
+ width: min(90%, 640px);
+ @extend .marginAuto;
+
+ &-full {
+  @extend .marginAuto;
+  width: 100%;
+
+  @include mq(pc) {
+   width: min(90%, 640px);
+   display: block;
+  }
+ }
+}
+.contenedorTextoVideo {
+ inset: 0;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: left;
+ opacity: 0;
+ margin-top: 3rem;
+ @include mq(pc) {
+  position: absolute;
+  margin-top: -90px;
+ }
+}
+
+.videoTitulo {
+ text-align: left;
+ font-size: 23px;
+ color: #b14a4a;
+ font-family: $fontFamily;
+ line-height: 30px;
+ width: 100%;
+ margin-bottom: 29px;
+ //  font-weight: bold;
+ span {
+  display: block;
+ }
+}
+.videoParrafo {
+ font-size: 18px;
+ color: #6d4545;
+ font-family: $fontFamily2;
+ line-height: 26px;
+}
+
+.showText {
+ opacity: 1;
+}
