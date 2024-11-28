@@ -62,19 +62,13 @@ document.addEventListener('mouseout', e => {
  }
 });
 
-const Zona_Alcance = document.getElementById('Zona-Alcance');
 var botones = document.querySelectorAll('.Croquis');
-
-function mostrarElemento(e) {
- console.log('log');
-}
-
-botones.forEach(boton => {
- boton.addEventListener('click', mostrarElemento);
-});
-
-Zona_Alcance.addEventListener('click', e => {
- alert('asdasd');
+console.log(botones);
+botones.forEach((boton, i) => {
+ boton.addEventListener('click', function () {
+  var pos = i + 1;
+  console.log(pos);
+ });
 });
 
 document.addEventListener('click', e => {
@@ -86,11 +80,14 @@ document.addEventListener('click', e => {
   elementSearched.classList.toggle('showSVG');
  }
  //  console.log(e.target);
- if (e.target.closest('g[id*="Zona-"]')) {
-  let elementClicked = e.target.closest('g[id*="Zona-"]');
+ if (e.target.closest('g[id*="-Zona"]')) {
+  let elementClicked = e.target.closest('g[id*="-Zona"]');
+
+  // console.log(elementClicked.id);
   let elementSearched = document.getElementById(
-   elementClicked.id.replace('Zona-', '-PresionadoM')
+   elementClicked.id.replace('-Zona', '-PresionadoM')
   );
+  // console.log(elementClicked.id.replace('-Zona', '-PresionadoM'));
   elementSearched.classList.toggle('showSVG');
  }
 });
