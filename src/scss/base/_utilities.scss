@@ -473,9 +473,7 @@ Containers
 
  @include mq(tablet) {
   // gap: 130px;
-
  }
-
 }
 
 .cuadriculaGridx3 {
@@ -495,7 +493,6 @@ Containers
 .block {
  display: block;
 }
-
 
 .noMobile {
  @include mqmax(pc) {
@@ -686,8 +683,6 @@ dialog[open] {
  }
 }
 
-
-
 .flex-pc {
  @include mq(pc) {
   display: flex;
@@ -754,6 +749,10 @@ dialog[open] {
 }
 
 .youtube {
- aspect-ratio: 16/9;
  width: 100%;
+
+ aspect-ratio: 1 / 1;
+ @include mq(pc) {
+  aspect-ratio: 16/9;
+ }
 }
